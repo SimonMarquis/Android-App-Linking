@@ -8,17 +8,17 @@
 
 <table>
   <thead>
-    <tr><th>Method</th><th>Link</th><th>App not installed</th><th>Offline</th><th><a href="#deeplinking">Deeplink</a></th><th><a href="#referrer-receiver">Referrer</a></th><th><a href="#deferred-deeplink">Deferred deeplink</a></th></tr>
+    <tr><th>Method</th><th>Link</th><th>App not installed</th><th>Offline</th><th><a href="#referrer-receiver">Referrer</a></th><th><a href="#deeplinking">Deeplink</a></th><th><a href="#deferred-deeplink">Deferred deeplink</a></th></tr>
   </thead>
   <tbody>
-    <tr align="center"><th align="left"><a href="#web-url">Web url</a></th><td><a href="http://smarquis.fr/action?key=value#data">Test</a></td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td><td>❌</td></tr>
-    <tr align="center"><th align="left"><a href="#app-links">App Links</a></th><td><a href="https://smarquis.fr/action?key=value#data">Test</a></td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td><td>❌</td></tr>
-    <tr align="center"><th align="left"><a href="#custom-scheme">Custom scheme</a></th><td><a href="link://smarquis.fr/action?key=value#data">Test</a></td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td><td>❌</td></tr>
-    <tr align="center"><th align="left"><a href="intent-scheme">Intent scheme</a></th><td><a href="intent://smarquis.fr/action?key=value#data#Intent;scheme=link;package=fr.smarquis.applinks;S.key=value;S.market_referrer=my%20referrer%20data;end">Test</a></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
+    <tr align="center"><th align="left"><a href="#web-url">Web url</a></th><td><a href="http://smarquis.fr/action?key=value#data">Test</a></td><td>❌</td><td>✔️</td><td>❌</td><td>✔️</td><td>❌</td></tr>
+    <tr align="center"><th align="left"><a href="#app-links">App Links</a></th><td><a href="https://smarquis.fr/action?key=value#data">Test</a></td><td>❌</td><td>✔️</td><td>❌</td><td>✔️</td><td>❌</td></tr>
+    <tr align="center"><th align="left"><a href="#custom-scheme">Custom scheme</a></th><td><a href="link://smarquis.fr/action?key=value#data">Test</a></td><td>❌</td><td>✔️</td><td>❌</td><td>✔️</td><td>❌</td></tr>
+    <tr align="center"><th align="left"><a href="#intent-scheme">Intent scheme</a></th><td><a href="intent://smarquis.fr/action?key=value#data#Intent;scheme=link;package=fr.smarquis.applinks;S.key=value;S.market_referrer=my%20referrer%20data;end">Test</a></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
     <tr align="center"><th align="left"><a href="#app-scheme">App scheme</a></th><td><a href="android-app://fr.smarquis.applinks/https/smarquis.fr/action?key=value#data#Intent;S.key=value;S.market_referrer=my%20referrer%20data;end">Test</a></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
-    <tr align="center"><th align="left"><a href="#firebase-dynamic-links">Firebase Dynamic Links</a></th><td><a href="https://mr7f2.app.goo.gl/Tbeh">Test</a></td><td>✔️</td><td>❌</td><td>✔️</td><td>❌</td><td>✔️</td></tr>
+    <tr align="center"><th align="left"><a href="#firebase-dynamic-links">Firebase Dynamic Links</a></th><td><a href="https://mr7f2.app.goo.gl/Tbeh">Test</a></td><td>✔️</td><td>❌</td><td>❌</td><td>✔️</td><td>✔️</td></tr>
+    <tr align="center"><th align="left"><a href="#play-store-url">Play Store url</a></th><td><a href="https://play.google.com/store/apps/details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data">Test</a></td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td></tr>
     <tr align="center"><th align="left"><a href="#market-scheme">Market scheme</a></th><td><a href="market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data">Test</a></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
-    <tr align="center"><th align="left"><a href="#play-store-url">Play Store url</a></th><td><a href="https://play.google.com/store/apps/details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data">Test</a></td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
   </tbody>
 </table>
 
@@ -51,12 +51,12 @@
 
 ### Data
 
-| Data | Value |
+| Uri | Value |
 |---|---|
 | scheme | `http` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
+| path | `/action` |
+| query | `?key=value` |
 | fragment | `data` |
 
 ### Features
@@ -65,8 +65,8 @@
 |---|:---:|
 | App not installed | ❌ |
 | Offline | ✔️ |
-| Deeplink | ✔️ |
 | Referrer | ❌ |
+| Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
 ### Pros and Cons
@@ -129,12 +129,12 @@ Same as [Web url](#web-url) but with `https` only and `android:autoVerify="true"
 
 ### Data
 
-| Data | Value |
+| Uri | Value |
 |---|---|
 | scheme | `https` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
+| path | `/action` |
+| query | `?key=value` |
 | fragment | `data` |
 
 ### Features
@@ -143,8 +143,8 @@ Same as [Web url](#web-url) but with `https` only and `android:autoVerify="true"
 |---|:---:|
 | App not installed | ❌ |
 | Offline | ✔️ |
-| Deeplink | ✔️ |
 | Referrer | ❌ |
+| Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
 ### Pros and Cons
@@ -180,12 +180,13 @@ Cons:
 ```
 
 ### Data
-| Data | Value |
+
+| Uri | Value |
 |---|---|
 | scheme | `link` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
+| path | `/action` |
+| query | `?key=value` |
 | fragment | `data` |
 
 ### Features
@@ -194,8 +195,8 @@ Cons:
 |---|:---:|
 | App not installed | ❌ |
 | Offline | ✔️ |
-| Deeplink | ✔️ |
 | Referrer | ❌ |
+| Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
 ### Pros and Cons
@@ -232,14 +233,22 @@ And will contain additional parameters in the `Intent`.
 
 ### Data
 
-| Data | Value |
+| Uri | Value |
 |---|---|
 | scheme | `link` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
-| referrer | `my%20referrer%20data` |
-| extras | String `key`:`value` |
+| path | `/action` |
+| query | `?key=value` |
+| fragment | `data` |
+
+| Extra | Value |
+|---|---|
+| `key` | `value` |
+| `market_referrer` | `my referrer data` |
+
+| Referrer |
+|---|
+| `my referrer data` |
 
 ### Features
 
@@ -247,8 +256,8 @@ And will contain additional parameters in the `Intent`.
 |---|:---:|
 | App not installed | ✔️ |
 | Offline | ✔️ |
-| Deeplink | ✔️ |
 | Referrer | ✔️ |
+| Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
 ### Pros and Cons
@@ -286,14 +295,22 @@ And will contain additional parameters in the `Intent`.
 
 ### Data
 
-| Data | Value |
+| Uri | Value |
 |---|---|
 | scheme | `https` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
-| referrer | `my%20referrer%20data` |
-| extras | String `key`:`value` |
+| path | `/action` |
+| query | `?key=value` |
+| fragment | `data` |
+
+| Extra | Value |
+|---|---|
+| `key` | `value` |
+| `market_referrer` | `my referrer data` |
+
+| Referrer |
+|---|
+| `my referrer data` |
 
 ### Features
 
@@ -301,14 +318,13 @@ And will contain additional parameters in the `Intent`.
 |---|:---:|
 | App not installed | ✔️ |
 | Offline | ✔️ |
-| Deeplink | ✔️ |
 | Referrer | ✔️ |
+| Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
 ### Pros and Cons
 
 Cons:
-- Only handled by the Google Search app
 - Some browser doesn't handle non-http links
 
 ## Firebase Dynamic Links
@@ -347,13 +363,13 @@ FirebaseDynamicLinks.getInstance()
 
 ### Data
 
-| Data | Value |
+| Uri | Value |
 |---|---|
 | scheme | `https` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
-| referrer | `utm_source=(not%20set)&utm_medium=(not%20set)` |
+| path | `/action` |
+| query | `?key=value` |
+| fragment | `data` |
 
 ### Features
 
@@ -361,8 +377,8 @@ FirebaseDynamicLinks.getInstance()
 |---|:---:|
 | App not installed | ✔️ |
 | Offline | ❌ |
-| Deeplink | ✔️ |
 | Referrer | ❌ |
+| Deeplink | ✔️ |
 | Deferred deeplink | ✔️ |
 
 ### Pros and Cons
@@ -372,50 +388,6 @@ Pros:
 
 Cons:
 - Ugly progress dialog when fetching link data
-- Wrong referrer
-
-## Market scheme
-
-> Documentation:  
-> https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary
-
-**`market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data`**
-
-### Web
-
-This url contains additional query parameters that will be handled by the Play Store app:
-- `url` is the forwarded url
-- `referrer` will trigger a `com.android.vending.INSTALL_REFERRER` Broadcast once the app is installed.
-
-### Android
-
-The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=value#data`
-
-### Data
-
-| Data | Value |
-|---|---|
-| scheme | `link` |
-| host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
-| referrer | `my%20referrer%20data` |
-
-### Features
-
-| Feature | ✔️/❌ |
-|---|:---:|
-| App not installed | ✔️ |
-| Offline | ✔️ |
-| Deeplink | ✔️ |
-| Referrer | ✔️ |
-| Deferred deeplink | ✔️ |
-
-### Pros and Cons
-
-Pros:
-- Changes the "Open" button in Play Store to "Continue"
-- Triggers a notification with "Tap to continue"
 
 ## Play Store url
 
@@ -438,13 +410,19 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 
 ### Data
 
-| Data | Value |
+*Uri available in deferred deeplink only*
+
+| Uri | Value |
 |---|---|
 | scheme | `link` |
 | host | `smarquis.fr` |
-| path | `action` |
-| query | `key=value` |
-| referrer | `my%20referrer%20data` |
+| path | `/action` |
+| query | `?key=value` |
+| fragment | `data` |
+
+| Referrer |
+|---|
+| `my referrer data` |
 
 ### Features
 
@@ -452,20 +430,91 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 |---|:---:|
 | App not installed | ✔️ |
 | Offline | ✔️ |
-| Deeplink | ✔️ |
 | Referrer | ✔️ |
+| Deeplink | ❌ |
 | Deferred deeplink | ✔️ |
 
 ### Pros and Cons
 
 Cons:
-- Some (in-app) browsers might directly handle these links and prevent the app to launch
+- Some (in-app) browsers might directly handle these links and prevent the Play Store app to launch
+- When app is installed, it still opens the Play Store app and completely ignores the deeplink
+
+Pros:
+- Changes the "Open" button in Play Store to "Continue"
+- Triggers a notification with "Tap to continue"
+
+## Market scheme
+
+> Documentation:  
+> https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary
+
+**`market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data`**
+
+### Web
+
+This url contains additional query parameters that will be handled by the Play Store app:
+- `url` is the forwarded url
+- `referrer` will trigger a `com.android.vending.INSTALL_REFERRER` Broadcast once the app is installed.
+
+### Android
+
+The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=value#data`
+
+### Data
+
+| Uri | Value |
+|---|---|
+| scheme | `link` |
+| host | `smarquis.fr` |
+| path | `/action` |
+| query | `?key=value` |
+| fragment | `data` |
+
+| Referrer |
+|---|
+| `my referrer data` |
+
+### Features
+
+| Feature | ✔️/❌ |
+|---|:---:|
+| App not installed | ✔️ |
+| Offline | ✔️ |
+| Referrer | ✔️ |
+| Deeplink | ✔️ |
+| Deferred deeplink | ✔️ |
+
+### Pros and Cons
 
 Pros:
 - Changes the "Open" button in Play Store to "Continue"
 - Triggers a notification with "Tap to continue"
 
 ## More
+
+### Referrer Receiver
+
+Add the Broadcast Receiver in `AndroidManifest.xml`
+
+```xml
+<receiver
+    android:name=".ReferrerReceiver"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER" />
+    </intent-filter>
+</receiver>
+```
+
+And in the Receiver's `onReceive()` method, you can get the referrer value
+
+```java
+@Override
+public void onReceive(Context context, Intent intent) {
+    String referrer = intent.getExtras().getString("referrer");
+}
+```
 
 ### Deeplinking
 
@@ -495,29 +544,6 @@ These two actions are essential to the Deferred deeplink method as they provide 
 |---|---|
 | ![](store_deeplink_notification.png) | ![](store_deferred_deeplink_notification.png) |
 | ![](store_deeplink_button.png) | ![](store_deferred_deeplink_button.png) |
-
-### Referrer Receiver
-
-Add the Broadcast Receiver in `AndroidManifest.xml`
-
-```xml
-<receiver
-    android:name=".ReferrerReceiver"
-    android:exported="true">
-    <intent-filter>
-        <action android:name="com.android.vending.INSTALL_REFERRER" />
-    </intent-filter>
-</receiver>
-```
-
-And in the Receiver's `onReceive()` method, you can get the referrer value
-
-```java
-@Override
-public void onReceive(Context context, Intent intent) {
-    String referrer = intent.getExtras().getString("referrer");
-}
-```
 
 ### Url redirections
 
