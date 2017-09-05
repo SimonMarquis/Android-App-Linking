@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AppLinks</string>
+
+    <string name="header_intent">Intent</string>
+    <string name="header_data">Data</string>
+    <string name="header_extras">Extras</string>
+
+    <string name="firebase_dynamic_link_received">Firebase Dynamic Link received:\n&lt;b&gt;%s&lt;/b&gt;</string>
+
+    <string name="referrer_title">Referrer</string>
+    <string name="referrer_installer_package">Installed by</string>
+    <string name="referrer_first_launch">First launch</string>
+    <string name="referrer_detection">Referrer detection</string>
+    <string name="referrer_raw">Raw referrer</string>
+    <string name="referrer_decoded">Decoded referrer</string>
+</resources>

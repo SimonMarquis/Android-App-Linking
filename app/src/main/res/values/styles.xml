@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="App.Widget.Header" parent="TextAppearance.AppCompat.Title">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="App.Widget.Body" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:breakStrategy" tools:targetApi="m">simple</item>
+    </style>
+
+</resources>
