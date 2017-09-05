@@ -1,0 +1,1727 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>Android App Linking</title></head><body><article class="markdown-body"><h1 id="android-app-linking">
+<a id="user-content-android-app-linking" class="anchor" href="#android-app-linking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android App Linking</h1>
+<blockquote>
+<p>The ultimate developer guide to Android application linking methods</p>
+</blockquote>
+<p><em>The main objective of this guide is to explore the most common deeplinking methods on Android and evaluate their pros and cons, through the <a href="https://play.google.com/store/apps/details?id=fr.smarquis.applinks">AppLinks</a> app.</em></p>
+<br>
+<table>
+  <thead>
+    <tr>
+<th>Method</th>
+<th>Link</th>
+<th>App not installed</th>
+<th>Offline</th>
+<th><a href="#deeplinking">Deeplink</a></th>
+<th><a href="#referrer-receiver">Referrer</a></th>
+<th><a href="#deferred-deeplink">Deferred deeplink</a></th>
+</tr>
+  </thead>
+  <tbody>
+    <tr align="center">
+<th align="left"><a href="#web-url">Web url</a></th>
+<td><a href="http://smarquis.fr/action?key=value#data">Test</a></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="#app-links">App Links</a></th>
+<td><a href="https://smarquis.fr/action?key=value#data">Test</a></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="#custom-scheme">Custom scheme</a></th>
+<td><a href="link://smarquis.fr/action?key=value#data">Test</a></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="intent-scheme">Intent scheme</a></th>
+<td><a href="intent://smarquis.fr/action?key=value#data#Intent;scheme=link;package=fr.smarquis.applinks;S.key=value;S.market_referrer=my%20referrer%20data;end">Test</a></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="#app-scheme">App scheme</a></th>
+<td><a href="android-app://fr.smarquis.applinks/https/smarquis.fr/action?key=value#data#Intent;S.key=value;S.market_referrer=my%20referrer%20data;end">Test</a></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="#firebase-dynamic-links">Firebase Dynamic Links</a></th>
+<td><a href="https://mr7f2.app.goo.gl/Tbeh">Test</a></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="#market-scheme">Market scheme</a></th>
+<td><a href="market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data">Test</a></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+    <tr align="center">
+<th align="left"><a href="#play-store-url">Play Store url</a></th>
+<td><a href="https://play.google.com/store/apps/details?id=fr.smarquis.applinks&amp;url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&amp;referrer=my%20referrer%20data">Test</a></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+<td><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="web-url">
+<a id="user-content-web-url" class="anchor" href="#web-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web url</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.android.com/training/app-links/deep-linking.html">https://developer.android.com/training/app-links/deep-linking.html</a></p>
+</blockquote>
+<p><strong><code>http://smarquis.fr/action?key=value#data</code></strong></p>
+<h3 id="android">
+<a id="user-content-android" class="anchor" href="#android" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">activity</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>.MainActivity<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">intent-filter</span>&gt;
+        &lt;<span class="pl-ent">action</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.action.VIEW<span class="pl-pds">"</span></span> /&gt;
+
+        &lt;<span class="pl-ent">category</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.DEFAULT<span class="pl-pds">"</span></span> /&gt;
+        &lt;<span class="pl-ent">category</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.BROWSABLE<span class="pl-pds">"</span></span> /&gt;
+
+        &lt;<span class="pl-ent">data</span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">scheme</span>=<span class="pl-s"><span class="pl-pds">"</span>http<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">host</span>=<span class="pl-s"><span class="pl-pds">"</span>smarquis.fr<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">pathPattern</span>=<span class="pl-s"><span class="pl-pds">"</span>/action<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">intent-filter</span>&gt;
+&lt;/<span class="pl-ent">activity</span>&gt;</pre></div>
+<h3 id="data">
+<a id="user-content-data" class="anchor" href="#data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>http</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>fragment</td>
+<td><code>data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features">
+<a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons">
+<a id="user-content-pros-and-cons" class="anchor" href="#pros-and-cons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Cons:</p>
+<ul>
+<li>Initial disambiguation dialog</li>
+<li>Doesn't work on the same domain</li>
+<li>Some (in-app) browsers might directly handle these links and prevent the app to launch</li>
+</ul>
+<p><a href="disambiguation_dialog_resized.png" target="_blank"><img src="data:image/png;base64,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" alt="" style="max-width:100%;"></a></p>
+<h2 id="app-links">
+<a id="user-content-app-links" class="anchor" href="#app-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>App Links</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.android.com/training/app-links/verify-site-associations.html">https://developer.android.com/training/app-links/verify-site-associations.html</a></p>
+</blockquote>
+<p><strong><code>https://smarquis.fr/action?key=value#data</code></strong></p>
+<p>A JSON verification file needs to be available at <a href="https://smarquis.fr/.well-known/assetlinks.json">https://smarquis.fr/.well-known/assetlinks.json</a> containing the application's package name and keystore fingerprint</p>
+<div class="highlight highlight-source-json"><pre>[
+    {
+        <span class="pl-s"><span class="pl-pds">"</span>relation<span class="pl-pds">"</span></span>: [
+            <span class="pl-s"><span class="pl-pds">"</span>delegate_permission/common.handle_all_urls<span class="pl-pds">"</span></span>
+        ],
+        <span class="pl-s"><span class="pl-pds">"</span>target<span class="pl-pds">"</span></span>: {
+            <span class="pl-s"><span class="pl-pds">"</span>namespace<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>android_app<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>package_name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>fr.smarquis.applinks<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>sha256_cert_fingerprints<span class="pl-pds">"</span></span>: [
+                <span class="pl-s"><span class="pl-pds">"</span>6B:41:26:A6:1E:D8:BD:91:D3:8B:57:10:5F:07:5C:2D:AB:3E:26:A4:D1:3C:9C:97:15:78:9E:0D:56:0A:CE:DC<span class="pl-pds">"</span></span>
+            ]
+        }
+    }
+]</pre></div>
+<p>To test an existing statement file, you can use the official <a href="https://developers.google.com/digital-asset-links/tools/generator">Statement List Generator and Tester</a> tool.</p>
+<h3 id="android-1">
+<a id="user-content-android-1" class="anchor" href="#android-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<p>Same as <a href="#web-url">Web url</a> but with <code>https</code> only and <code>android:autoVerify="true"</code> attribute.</p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">activity</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>.MainActivity<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">intent-filter</span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">autoVerify</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
+        <span class="pl-e">tools</span><span class="pl-e">:</span><span class="pl-e">targetApi</span>=<span class="pl-s"><span class="pl-pds">"</span>m<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">action</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.action.VIEW<span class="pl-pds">"</span></span> /&gt;
+
+        &lt;<span class="pl-ent">category</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.DEFAULT<span class="pl-pds">"</span></span> /&gt;
+        &lt;<span class="pl-ent">category</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.BROWSABLE<span class="pl-pds">"</span></span> /&gt;
+        &lt;<span class="pl-ent">data</span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">scheme</span>=<span class="pl-s"><span class="pl-pds">"</span>https<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">host</span>=<span class="pl-s"><span class="pl-pds">"</span>smarquis.fr<span class="pl-pds">"</span></span>
+            <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">pathPattern</span>=<span class="pl-s"><span class="pl-pds">"</span>/action<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">intent-filter</span>&gt;
+&lt;/<span class="pl-ent">activity</span>&gt;</pre></div>
+<h3 id="data-1">
+<a id="user-content-data-1" class="anchor" href="#data-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>https</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>fragment</td>
+<td><code>data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-1">
+<a id="user-content-features-1" class="anchor" href="#features-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-1">
+<a id="user-content-pros-and-cons-1" class="anchor" href="#pros-and-cons-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Pros:</p>
+<ul>
+<li>No more disambiguation dialog</li>
+<li>No potential app hijacking</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Doesn't work on the same domain</li>
+<li>Some (in-app) browsers might directly handle these links and prevent the app to launch</li>
+</ul>
+<h2 id="custom-scheme">
+<a id="user-content-custom-scheme" class="anchor" href="#custom-scheme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Custom scheme</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.android.com/training/app-links/deep-linking.html">https://developer.android.com/training/app-links/deep-linking.html</a></p>
+</blockquote>
+<p><strong><code>link://smarquis.fr/action?key=value#data</code></strong></p>
+<h3 id="android-2">
+<a id="user-content-android-2" class="anchor" href="#android-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">activity</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>.MainActivity<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">intent-filter</span>&gt;
+        &lt;<span class="pl-ent">action</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.action.VIEW<span class="pl-pds">"</span></span> /&gt;
+
+        &lt;<span class="pl-ent">category</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.DEFAULT<span class="pl-pds">"</span></span> /&gt;
+        &lt;<span class="pl-ent">category</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>android.intent.category.BROWSABLE<span class="pl-pds">"</span></span> /&gt;
+
+        &lt;<span class="pl-ent">data</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">scheme</span>=<span class="pl-s"><span class="pl-pds">"</span>link<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">intent-filter</span>&gt;
+&lt;/<span class="pl-ent">activity</span>&gt;</pre></div>
+<h3 id="data-2">
+<a id="user-content-data-2" class="anchor" href="#data-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>link</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>fragment</td>
+<td><code>data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-2">
+<a id="user-content-features-2" class="anchor" href="#features-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-2">
+<a id="user-content-pros-and-cons-2" class="anchor" href="#pros-and-cons-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Cons:</p>
+<ul>
+<li>Some browser doesn't handle non-http links</li>
+</ul>
+<h2 id="intent-scheme">
+<a id="user-content-intent-scheme" class="anchor" href="#intent-scheme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Intent scheme</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.chrome.com/multidevice/android/intents">https://developer.chrome.com/multidevice/android/intents</a></p>
+</blockquote>
+<p><strong><code>intent://smarquis.fr/action?key=value#data#Intent;scheme=link;package=fr.smarquis.applinks;S.key=value;S.market_referrer=my%20referrer%20data;end</code></strong></p>
+<h3 id="web">
+<a id="user-content-web" class="anchor" href="#web" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web</h3>
+<p>Extra parameters can be added to the link and will be transfered as extras <code>Bundle</code> in the <code>Intent</code>:</p>
+<ul>
+<li>String: <code>S.key=value</code>
+</li>
+<li>Boolean: <code>B.key=value</code>
+</li>
+<li>Integer: <code>i.key=value</code>
+</li>
+<li>Long: <code>l.key=value</code>
+</li>
+<li>Float: <code>f.key=value</code>
+</li>
+</ul>
+<p>More:</p>
+<ul>
+<li>
+<code>S.browser_fallback_url</code> is the fallback URL if the corresponding link doesn't work of if app isn't available (will be removed from the <code>Intent</code>).</li>
+<li>
+<code>S.market_referrer</code> will trigger a <code>com.android.vending.INSTALL_REFERRER</code> Broadcast once the app is installed.</li>
+</ul>
+<h3 id="android-3">
+<a id="user-content-android-3" class="anchor" href="#android-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<p>The url will be rewritten by the <a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/java/android/content/Intent.java#5831">parseUri()</a> method from the Android source code.<br>
+The new url will be <code>link://smarquis.fr/action?key=value#data</code></p>
+<p>And will contain additional parameters in the <code>Intent</code>.</p>
+<h3 id="data-3">
+<a id="user-content-data-3" class="anchor" href="#data-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>link</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>referrer</td>
+<td><code>my%20referrer%20data</code></td>
+</tr>
+<tr>
+<td>extras</td>
+<td>String <code>key</code>:<code>value</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-3">
+<a id="user-content-features-3" class="anchor" href="#features-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-3">
+<a id="user-content-pros-and-cons-3" class="anchor" href="#pros-and-cons-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Cons:</p>
+<ul>
+<li>Some browser doesn't handle non-http links</li>
+</ul>
+<h2 id="app-scheme">
+<a id="user-content-app-scheme" class="anchor" href="#app-scheme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>App scheme</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.android.com/reference/android/content/Intent.html#URI_ANDROID_APP_SCHEME">https://developer.android.com/reference/android/content/Intent.html#URI_ANDROID_APP_SCHEME</a></p>
+</blockquote>
+<p><strong><code>android-app://fr.smarquis.applinks/https/smarquis.fr/action?key=value#data#Intent;S.key=value;S.market_referrer=my%20referrer%20data;end</code></strong></p>
+<p>Very similar to <a href="#intent-scheme">Intent scheme</a>.</p>
+<h3 id="web-1">
+<a id="user-content-web-1" class="anchor" href="#web-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web</h3>
+<p>Extra parameters can be added to the link and will be transfered as extras <code>Bundle</code> in the <code>Intent</code>:</p>
+<ul>
+<li>String: <code>S.key=value</code>
+</li>
+<li>Boolean: <code>B.key=value</code>
+</li>
+<li>Integer: <code>i.key=value</code>
+</li>
+<li>Long: <code>l.key=value</code>
+</li>
+<li>Float: <code>f.key=value</code>
+</li>
+</ul>
+<p>More:</p>
+<ul>
+<li>
+<code>S.market_referrer</code> will trigger a <code>com.android.vending.INSTALL_REFERRER</code> Broadcast once the app is installed.</li>
+</ul>
+<h3 id="android-4">
+<a id="user-content-android-4" class="anchor" href="#android-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<p>The url will be rewritten by the <a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/java/android/content/Intent.java#5831">parseUri()</a> method from the Android source code.<br>
+The new url will be <code>https://smarquis.fr/action?key=value#data</code></p>
+<p>And will contain additional parameters in the <code>Intent</code>.</p>
+<h3 id="data-4">
+<a id="user-content-data-4" class="anchor" href="#data-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>https</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>referrer</td>
+<td><code>my%20referrer%20data</code></td>
+</tr>
+<tr>
+<td>extras</td>
+<td>String <code>key</code>:<code>value</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-4">
+<a id="user-content-features-4" class="anchor" href="#features-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-4">
+<a id="user-content-pros-and-cons-4" class="anchor" href="#pros-and-cons-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Cons:</p>
+<ul>
+<li>Only handled by the Google Search app</li>
+<li>Some browser doesn't handle non-http links</li>
+</ul>
+<h2 id="firebase-dynamic-links">
+<a id="user-content-firebase-dynamic-links" class="anchor" href="#firebase-dynamic-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Firebase Dynamic Links</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://firebase.google.com/docs/dynamic-links">https://firebase.google.com/docs/dynamic-links</a></p>
+</blockquote>
+<p><strong><code>https://mr7f2.app.goo.gl/Tbeh</code></strong></p>
+<h3 id="web-2">
+<a id="user-content-web-2" class="anchor" href="#web-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web</h3>
+<p>Create the link from the Firebase console.</p>
+<h3 id="android-5">
+<a id="user-content-android-5" class="anchor" href="#android-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<p>Same requirements as <a href="#app-links">App Links</a>.<br>
+And add the Firebase Dynamic Links dependency in the app-level <code>build.gradle</code> file:</p>
+<div class="highlight highlight-source-groovy"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.google.firebase:firebase-invites:11.2.0<span class="pl-pds">'</span></span></pre></div>
+<p>Then in your <code>Activity</code>'s <code>onCreate</code> method, use this code to get the link if the user came from a Firebase Dynamic Link:</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">FirebaseDynamicLinks</span><span class="pl-k">.</span>getInstance()
+        .getDynamicLink(getIntent())
+        .addOnSuccessListener(<span class="pl-c1">this</span>, <span class="pl-k">new</span> <span class="pl-k">OnSuccessListener&lt;<span class="pl-smi">PendingDynamicLinkData</span>&gt;</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onSuccess</span>(<span class="pl-smi">PendingDynamicLinkData</span> <span class="pl-v">pendingDynamicLinkData</span>) {
+                <span class="pl-k">if</span> (pendingDynamicLinkData <span class="pl-k">!=</span> <span class="pl-c1">null</span>) {
+                    <span class="pl-smi">Uri</span> link <span class="pl-k">=</span> pendingDynamicLinkData<span class="pl-k">.</span>getLink();
+                }
+            }
+        });</pre></div>
+<h3 id="data-5">
+<a id="user-content-data-5" class="anchor" href="#data-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>https</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>referrer</td>
+<td><code>utm_source=(not%20set)&amp;utm_medium=(not%20set)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-5">
+<a id="user-content-features-5" class="anchor" href="#features-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-5">
+<a id="user-content-pros-and-cons-5" class="anchor" href="#pros-and-cons-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Pros:</p>
+<ul>
+<li>Shorten urls <a href="https://mr7f2.app.goo.gl/Tbeh?d=1">https://mr7f2.app.goo.gl/Tbeh?d=1</a>
+</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Ugly progress dialog when fetching link data</li>
+<li>Wrong referrer</li>
+</ul>
+<h2 id="market-scheme">
+<a id="user-content-market-scheme" class="anchor" href="#market-scheme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Market scheme</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary">https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary</a></p>
+</blockquote>
+<p><strong><code>market://details?id=fr.smarquis.applinks&amp;url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&amp;referrer=my%20referrer%20data</code></strong></p>
+<h3 id="web-3">
+<a id="user-content-web-3" class="anchor" href="#web-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web</h3>
+<p>This url contains additional query parameters that will be handled by the Play Store app:</p>
+<ul>
+<li>
+<code>url</code> is the forwarded url</li>
+<li>
+<code>referrer</code> will trigger a <code>com.android.vending.INSTALL_REFERRER</code> Broadcast once the app is installed.</li>
+</ul>
+<h3 id="android-6">
+<a id="user-content-android-6" class="anchor" href="#android-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<p>The url will be rewritten by the Play Store to <code>link://smarquis.fr/action?key=value#data</code></p>
+<h3 id="data-6">
+<a id="user-content-data-6" class="anchor" href="#data-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>link</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>referrer</td>
+<td><code>my%20referrer%20data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-6">
+<a id="user-content-features-6" class="anchor" href="#features-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-6">
+<a id="user-content-pros-and-cons-6" class="anchor" href="#pros-and-cons-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Pros:</p>
+<ul>
+<li>Changes the "Open" button in Play Store to "Continue"</li>
+<li>Triggers a notification with "Tap to continue"</li>
+</ul>
+<h2 id="play-store-url">
+<a id="user-content-play-store-url" class="anchor" href="#play-store-url" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Play Store url</h2>
+<blockquote>
+<p>Documentation:<br>
+<a href="https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary">https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary</a></p>
+</blockquote>
+<p><strong><code>https://play.google.com/store/apps/details?id=fr.smarquis.applinks&amp;url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&amp;referrer=my%20referrer%20data</code></strong></p>
+<p>Very similar to the <a href="#market-scheme">Market scheme</a>.</p>
+<h3 id="web-4">
+<a id="user-content-web-4" class="anchor" href="#web-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web</h3>
+<p>This url contains additional query parameters that will be handled by the Play Store app:</p>
+<ul>
+<li>
+<code>url</code> is the forwarded url</li>
+<li>
+<code>referrer</code> will trigger a <code>com.android.vending.INSTALL_REFERRER</code> Broadcast once the app is installed.</li>
+</ul>
+<h3 id="android-7">
+<a id="user-content-android-7" class="anchor" href="#android-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android</h3>
+<p>The url will be rewritten by the Play Store to <code>link://smarquis.fr/action?key=value#data</code></p>
+<h3 id="data-7">
+<a id="user-content-data-7" class="anchor" href="#data-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td><code>link</code></td>
+</tr>
+<tr>
+<td>host</td>
+<td><code>smarquis.fr</code></td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>action</code></td>
+</tr>
+<tr>
+<td>query</td>
+<td><code>key=value</code></td>
+</tr>
+<tr>
+<td>referrer</td>
+<td><code>my%20referrer%20data</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="features-7">
+<a id="user-content-features-7" class="anchor" href="#features-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th align="center">
+<g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji>/<g-emoji alias="x" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" ios-version="6.0">❌</g-emoji>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App not installed</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Offline</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Referrer</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+<tr>
+<td>Deferred deeplink</td>
+<td align="center"><g-emoji alias="heavy_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2714.png" ios-version="6.0">✔️</g-emoji></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pros-and-cons-7">
+<a id="user-content-pros-and-cons-7" class="anchor" href="#pros-and-cons-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pros and Cons</h3>
+<p>Cons:</p>
+<ul>
+<li>Some (in-app) browsers might directly handle these links and prevent the app to launch</li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Changes the "Open" button in Play Store to "Continue"</li>
+<li>Triggers a notification with "Tap to continue"</li>
+</ul>
+<h2 id="more">
+<a id="user-content-more" class="anchor" href="#more" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More</h2>
+<h3 id="deeplinking">
+<a id="user-content-deeplinking" class="anchor" href="#deeplinking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deeplinking</h3>
+<p>You can get the deeplink <code>Uri</code> in your <code>Activity</code>'s <code>onCreate()</code> method as well as the corresponding properties:</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">@Override</span>
+<span class="pl-k">protected</span> <span class="pl-k">void</span> onCreate(<span class="pl-k">@Nullable</span> <span class="pl-smi">Bundle</span> savedInstanceState) {
+    <span class="pl-c1">super</span><span class="pl-k">.</span>onCreate(savedInstanceState);
+    <span class="pl-smi">Uri</span> deeplink <span class="pl-k">=</span> getIntent()<span class="pl-k">.</span>getData();
+    <span class="pl-k">if</span> (deeplink <span class="pl-k">!=</span> <span class="pl-c1">null</span>) {
+        <span class="pl-smi">String</span> host <span class="pl-k">=</span> deeplink<span class="pl-k">.</span>getHost();
+        <span class="pl-smi">String</span> path <span class="pl-k">=</span> deeplink<span class="pl-k">.</span>getPath();
+        <span class="pl-smi">String</span> query <span class="pl-k">=</span> deeplink<span class="pl-k">.</span>getQuery();
+        <span class="pl-smi">String</span> fragment <span class="pl-k">=</span> deeplink<span class="pl-k">.</span>getFragment();
+    }
+}</pre></div>
+<h3 id="deferred-deeplink">
+<a id="user-content-deferred-deeplink" class="anchor" href="#deferred-deeplink" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deferred deeplink</h3>
+<p>When using <a href="#play-store-url">Play Store url</a> or <a href="#market-scheme">Market scheme</a> or <a href="#firebase-dynamic-links">Firebase Dynamic Links</a> methods, the regular Play Store <strong>Open</strong> button will be replaced by a <strong>Continue</strong> button.<br>
+Furthermore, a notification will be displayed with <strong>Tap to continue</strong> content.<br>
+These two actions are essential to the Deferred deeplink method as they provide the initial data to the app.</p>
+<table>
+<thead>
+<tr>
+<th>Regular Deeplink</th>
+<th>Deferred Deeplink</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="store_deeplink_notification_resized.png" target="_blank"><img src="data:image/png;base64,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" alt="" style="max-width:100%;"></a></td>
+<td><a href="store_defered_deeplink_notification_resized.png" target="_blank"><img src="data:image/png;base64,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" alt="" style="max-width:100%;"></a></td>
+</tr>
+<tr>
+<td><a href="store_deeplink_button_resized.png" target="_blank"><img src="data:image/png;base64,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" alt="" style="max-width:100%;"></a></td>
+<td><a href="store_defered_deeplink_button_resized.png" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWUAAABoCAYAAAApbOHRAAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAABvqSURBVHhe7Z0JvI3V+sd/+8zz4RzzEDKEqEhlKFJKSnzq1m2uSylFabo3+d9U6hZJRUUiDaJcEmW4pJAGhUwJGZJ55kzO4Az/9Xv2u47XcQ7nZO9jO56v1me/71rrHfZp7d/7vM961lqePAMURVGUgCDI+VQURVECABVlRVGUAEJFWVEUJYBQUVYURQkgVJQVRVECCBVlRVGUAEJF+Qxh27ZtmDdvHg4cOODkKIoSiKgonwTDhg3DNddcgw0bNjg5vmP69Om46qqrMHfuXCfnaJ577jl4PJ5iX/vjjz9G+/btsWDBAidHUZRAxGeizDEogZr8xdNPPy0i99prrzk5vmPz5s2YM2cOtm/f7uQcTUREhKSQkBAn5/hERUWJiIeHhzs5iqIEIj4R5ZycHOTm5hYqiIGQMjIy5NOX0JKlyFWtWlWs0OORkpLibBXO4cOHj7k/ii3PHxwc7OQcTd++fZGeno5atWo5OUeTnJzsbJWM7OxspKWlOXuKopQ2PrOUKSBuIQyEZKHQMPmSoUOHIjQ0FKNHjxYBnDp1qlMCsW7597j77rtRu3ZtxMXFSd3XX3/dqQHUqFEDF1xwAbp27YqwsDAEBQXh5ptvdkpPzBNPPCHX+PXXX2W/ZcuWcp1BgwZJfnx8POrXr1+kwH766adSj8cRfofmzZvLfcbExMjDZv78+VKmKErp4TNLmfBHHkjJwlf2E1mrJSErKwtfffUVbrjhBlx++eUiZPQvW2jd0rXwxRdf4PHHH8e0adNEILm9ZMkSqUMB/eOPP1CxYkVxU1CcJ0+ejAEDBkj5ieD5ibWko6OjxbqeMWOGnK93797YunWriLcbivWyZctw22234bzzzsPChQslv0OHDnI/33//PX777Td5UPC7paamSrmiKKXDSYuy2yINVGiF0r3iK4YPHy6fPXr0kE8K3DfffHOUgGVmZuLWW2/FI488guuuuw7jxo2T+xgzZoyU834qVKgglvaVV16JKVOmIDExEePHj5fy4mIfPvw8ePCgWLc835tvvin3YC1pQqFdsWKFiO0555yD5cuXOyXApk2b5AHRunVrNGrUSDoY3333XXGRKIpSevjEUnZbpWcCFDwKaqtWrWS/Z8+eIrgjRoyQfcKHlfvv0qxZMxHFtWvXOjnH/t0ohnv37pVtnq+kFHxAct/9MKI13b9/f8nv16+fk+uF0RyM5KC1fcUVV4go86FDoVYUpfRQUS4htDx37tyZL7pMl112mYi0taDt36Pg34XHHE9srRvIX1CgY2NjUa9ePTz44INiWVseeugh2R84cKBY2Pfffz/q1KnjlCqKUlr4RJTPJGglUzwZ/fDhhx+KO2Ls2LFo06aNDNCge4A+bAoyoz4sDJ2jL/r888+XfZYXFGH6cqtXry7b1sJlKJuvYGcerXlGjhw6dEjioMmuXbvQpUsXfP3113jyySfFr/zSSy+JS6OoOGlFUfyDinIJoQCXK1dOxIvRFd26dROfMl//Gdr2xhtvSPQCO+LYcUc3AY+58847xUru1auXnIfbSUlJIoas165dOxltR4uVUJQp7vTrstOOLhKm22+/XTotbQefdVm43RRurPCznIn7VapUkQ7FxYsX49lnn0XlypWxaNEi3HPPPfjoo4+kE3PSpEniyrAPEUVRSgcV5RLw2WefSaQFxbEgjGRo0KCBCNr+/ftF/Dja79tvv8W9994r+//9738lRI5QIBl2xkRRp4X9z3/+Ew888ICU8zrs+Fu9ejW+/PJLzJw5UxIjOijeFH36iK2LhBY1991w3+bZUDdb/5lnnsGll14qD5Hff/9d/MktWrSQ67NjkqF0HJadkJAg9RVFKR1OejkoHk7BKU7HFOsW9LMWhq1X1K0V5xxueB4KGf2+pcGePXtQqVIlsXDp7qDbgp18bho2bCh/t3Xr1jk5gQMtfoq4oiilT6lZyoUJLffdyWLr8ZNiXzCRogQ7ELCuBHaYkYKCTCjIvh7Q4itUkBXl1OF3UaZ4MllBpS/UbrsF2S3A3LbHFKzDxHz3eQIN3ntkZORx55mgu8GXnXiKopQN/Oq+YJkVUcIIBHZccaBFYZfdt28ffvzxRxnuSxgHvGbNGrE0eR57DM9XrVo16Ziif5flLCvsnIT5pem+UBRF+av4TZSZbwWZPlZ2HrGH/0Rw2O8ll1wi22effbYM/T0ePP/IkSNx3333FSnMzFNRVhTldMCv7/4UTE5BSavWLch8rWceQ7Pcia/zdk4Hwphdhp/ZckYqcISZe5QZ/bccecbQMz4EFEVRTmf8Yikzz8bRMkzMRhgwHpZxsFdffbXsF0ZerjPLm/lnz1EYHFX31FNPyfksdI8wzMt2tFl4PrWUFUU5HfCb+4L7FEz6fclZZ52FP//8U7YpvLTRPebfyfL2229L6BnhsOCNGzf6VZQ5as/Oz8xEy54WPGN9Gzdu7NQ6MYw3Zkwz3wA6d+6sgzQURRH86r5wzx/Mob2EQpablyvCTDEvKKBFwfqF1eUIOc5LTOh/XrVq1TEPCF/C4dV82Hz++ecy6o2dlhR8Ts9ZXCjsEydOlBjmJk2aYNasWU6JoihnOn5RL+vb5VwOhKtjUHxgDGSKMqFwchQZXRQhoSEypJeJ+zYxXpZ5/AwKDpKpMAnF2Z6H9OnTx9lCsToTTwbeF6/H0XdcDopvAhw1d/3110s5JyyiH52j9ywUbo4GtHHJtJI5uIQPEPrH6WPntJ+c59jC+Sd0BRBFOfPwmyjzFd9atnaSHVrGbjG14p2TnSNl1nK2iSLGPCtmtLAt7vOI4DtYF4m/4D1zhJ4bXvOtt96Sbc5j8fzzz8t9E06VSZcKZ2fjcGtCYed3st+TMKyP82cQHvvKK68cM2xaUZSyj19EmYJJXyvFh7BTjli3hSfPK8ZWkGgpUpSYaBXbZPOYSFSkd7BFwSiL9evXO1te37U/oVBSaBkfzUmG6Irg/XGwCOF3oouD81ns2LFD3ga6d+8uK0lzHgn6ntu2bYvy5cujadOmIvAUYZ6D986Z2bg6CWedUxTlzMNvokwoOoSWIgeBUGhFUM1VKV5cIomixNd0TiXJxJUuCksULk6V6baQLe7VpG2Ms7/gvb744ot45513ZMFUvgVYq5jw/uw+J6yn+4W+9VdffVU6BCm+/M72geTmxhtvFP8yp8vk8lCKopx5+FWUH330UfkkXM2CBId4h0dTnPlJobY+ZHdimTuxvlvwmEfYWWb9yJyBjREQhQm3r+C5OWHP8bDXp+VLEec6efQ/0xfNe7TumIJwmSYOnqE7hMs1KYpy5uEXUbYCescdd6Bu3bqSx1d5xinPnDFT9gu6ICwULIlVZticCyvitDy5TZcIp5nkGniW0aNGy6c/RZlzIBcUZe7bJf3ZYWfLuUjpTTfdhLvuugsvvPBC/lzKLLcLuXLSIneHHpeE0vA4RTlz8evcF8zbsmWLuCnsjGmEPmT6nAtemsK2dOnS/BC3S1peghXLvSt52Nd9CjK3C66yzM41u/4cy92iz7xTOXiE7gpenw+lE8HvwYgOO++yoihnFn6xlC0U65o1a4pVy0ngLRRoWpwUYXci7lf7Pbv3SBQH69KyZGK9goJMXzMFOVChH/lEgkzrmS4OfjcVZEU5c/GrpWyxZezAGvnuSKxcsVIsx4KXZt6Cbxfgoosvkv2WLVvKEG2KmrV8eQytbI6Eo2vgscceO+raLA80S7k48J7ZGVqSUYGKopQ9SkWUCeuxA684WFF1C2tR8LxM7rqnoygriqIQv7ovCsJBInbQhBXTgsmW8bOoerbMJsJ896eiKMrpSKlZyvnwasaIPd5li2MhF4Tn43H20w3zfGUpb9ryG7Yd+M08zcIRlBcCj/naebnmuh6OVjR/h2CPuFsa1mybP6BEURSluJS+KPuRwgSZ+FKUJ/7vP9gVPx7BuYkIzklGTlYVhAdXQ1LaeoRGH0RWViYW/7wBg3tsRPUq/h1dqChK2ePUK6kP+SsWdkkJCQ5HcF4MQiPSEBfeFP/oMA3d24/BNZf2Q1BODcTFVsWFzVoa69k5wIfs37/f2ToxfBDZiBZFUU4fypSlXBS+tJQnzx6MXbGfISPnIDo2GIo6lZrh51UL0ObcDpiw/B9IztqCpJ1BuLP5JNSofqylPHDgQBmByIElDH9jyOCQIUPkHjmvsl1VhbHNnP+CA044JSmjTLhgAOfS4BDsu+++W/zzHTp0wLx58+QYy7hx4zBjxgwJw+N57GRJiqIEPmXKUi4NvLZ4LoKCE7B0yyRMW94X5WPCEYJYpGRlIyc4DMFhppan8GcdI1A4/HzMmDEyvSeHU48YMUKsfAr1Bx98IGn8+PH5IwApyO+9957MHMcpQCdMmCATF3F0Iyc2ckOhpigzcU4QToLk7+lMFUXxHT4VZVp7NuXvO0Om3Uk6+0oBXt+6NHzl2sij2JpThYeE4kD6L4iJS8B5tTpjZ8oGpKWnAqGh5jsWPreFxT1Mm0OqOQS9KDg3MycySkxMdHIgE+rTwraRJ24o1LSSLbt37y7WSEJFUQIDn4oyhc+mQML9oDhp+P3MXy0Xh3B2lZYIyczFV4sHoEpsfVSMqoqc7APHXeSKorlixQpxOUyZMkWs39tvv13K+Hfr1q2bDLO+4YYb8kczxsXFSfm+ffswe/ZsfPfdd+L6OJ7LaPDgwejUqZMMcff3dKaKoviOkxZlWmtuMXYn4gky2wWSD5bmKxG8R1+Jspwl2IPsjBycU+ketG/4byRENJCy4NxIhCHY/FVpKRd+Pf5d7IREnCGPbomGDRvm3+P7778vw8a53BRHLnKFb05pSngcxXjs2LFYuXKl5BUFV0aZOXOmzDjH+UQURTk9OGlRtlaoFWG7b7H7pyLZe6KoUdx8g/lunlwjqFFY/ecnCEEkLmxyK3amL0Nq1jrzB41GXm7RIxcprC1atJDlo6677jqUK1fOKSkczrJHYeV8IRxazjmXrYgXBjs0X375ZWcPuPDCC2VifUVRTg9OWpQpfAy9ovBxm6/UTNx2z498KpK9D772023gCyIiQpAQFoXysZWR5FmOz1fdhllr78M3ax5HfEIiykWVR3yMuS7fCAqBf6eCEyoRPkSYP2zYMJkjmhPj071B+vXrJ9N/svOPHYScc5nCTAqGvbHjj4sKDB06VBZ25XqAdIUoinJ6cNIhcYSixw4lLpXEUWy+EsC/Cr9Sbk4uDmcfFp8s74kdY74I23v2xX9h9Ng3EBkVj1xxURiL1UOrPAjB5nsHZ+bhwME9WDhvI2rXruM9yAVnzKPVbv3Ebhj6xhA2Qks4JiZG7ptwzuWffvpJpjFt1apV/nfhUlj16tWTbTdcUorf3S4uoCjK6YFPRJkCwqWPDh48mD95eyBAAWOYGVeO5rYv6Nn7YYx8+8Rxv+t+X4d69Y8VS0VRlOPhE1G20Mpzz4d8qqELwz3tpy+YPPUzzJ79HSIiQs1fj6FtHum3ZBLLOS8SaYf24+UXXkCFCt6BIIqiKMXFp6KsKIqinBwn72RVFEVRfIaKsqIoSgChoqwoihJAqCgriqIEECrKiqIoAYSKsqIoSgChoqwoihJAqCgriqIEECrKiqIoAYSKsqIoSgChoqwoihJAqCgriqIEECrKiqIoAYSKsqIoSgBR4qk7e855E0uSNiEkqOh16BTFnxzKysC0q/4PNRMqOznH8vP2Nbhien/kIBdBPpxPW1GKy+HcHLRObIB5fxvo5BSPEoly2uEM3PLVYEy79hknR1FKnz9SdmPAj+Pw/tWPOTnH8vj8UXj9t6mICY12chSl9ElN3Y3cPl/LcnHFpUTui5y8XMSH+2pVaEX5a8SGRiL9cKazVzgeY2oEBYUgOChIk6ZTlhAUytbobZTFpMQ+ZV2oRDnV5Jo2eOJmru1UCQBMQy2p80w7+pTTkxO29JL+FBQlMFBRVhRFCSBUlBVFUQIIFWVFOc1hPw/Drwrr72HnfDbLXD521nPX5Tb99PazYLL1C9u22PzCygoe507ueooXFeVTwN6MZGdLUf46FLSUrHQkZyShcmS8+UxGctahfPFLSk8SQY4JjUBy6n4j3NlSlpqdgeTMVOTk5so+BT0lKy3/M8WUuVPy4fQjdfJyJKWY66SYfB7PlGbOmZadaa6bm38u731w/xAycrKQaa6fkuU6t6nHfNZTjqCi7DBnyzJ4/tPU2QP2mAbtGdAIm1P2oNeCkfAMuoi/AqcU8DxbD4t2rcO6pB1mu75phIfxFc8xoDHmbF3u1ALiR9+Kh83xZNDSSeY8F6Pi8M7wDLkM325fhfnbf4Wnf114BraAZ+iV8LzSUq77t1negPMV+zbB83wjTP9zkeyT1Qe2yvXTTYN2c8vsV1D74/ucPaUsQyGjAN/R4HLk9ZqJjXeMMp8z0LNxJxHclMwUzOryEtJ7TMLOez5CRq/piA4x4nxoP7bf9T7yHpqGVCOQGTmHcUFiHeQ9+CUqRMbJJ8uOSj2nIjY0XMqalK+FxuVrmu0v8Nh5Xc09pMnDYN3tIzG/60tIPXRQ6l1WtbGcm/fBus80vwUda1xgtl3nNfXeaNNDxF05goqyQ2RIGBCd6OwBoUEhQEwFhAeHIiE8xlQoh7ZT+zmlhugKiDDHsJz1QjzB3nOYBttxWn+nElA5qhwSI2Jlu68R2lX3T0Le499i2NVPod3YbmhXrQnyBmxAXt/F5v9GMJZ0H4+8/qvxWce+csyryz8HKtXH4GXm0yGM92auH1wgIL28uc+KxmJSyj7ZxlqtbtrrR1c8ilu/Gmwe5hfj7+ahPLxtT8RFxGBQq3txdc0LEDv6FnhevxxrzIN81S1vARkp2Ja2X87xdtteyDKCmmkMCpKRnQXPW53gebUNftu/GR//Phee19pKXoQRdJJphJaJDGndHTFhUYCxivn2t988DKzhQkEWHDuG1rbN87zWzpzzGnjevhZ9vhslcefKEVSUiwFfxc43T/4FW5Zg9palTu6xSHs0It044Sx0mzvUm2kwL3jejeAwfL5xoWw+3LQzdjw8K//Vjb4/mETrx83YX2dgzvUvYP7GH8yPxmnoyhlPuhHQB869RrYnrPwScYlnY+KGBXjpl4mIMO3soSad8MqyyUg1lmpodALunTdMHtgR5arLsPPle/8wda5FHWMlW5FlfpQRdBgjgsZGZEi4bEeah31QISGGq4xwL+hq3ujMW2WJkGHv3hQewsEVihsVZQdHNo/FFMhIxtBoTOk8AB0nP+HNL3TYpKl8OAOLbhyCD34aiwPGcuAPhL478t2d7+Hfiz42lkhr3DjrZVSJKm/ap7ex2+vnC7hhwvoFiIlKwJU1zkdD81AYsnyyU6Kc6eSZNsn2I6/+xtJkO4oLi8b/LfwQu9P2Icbk7Tx0wLx8hcmb1brkHXJcbFik7M/dsRIfrPkaC298BQcz06SMIsl/XsG0mBz3rovLpjyNCyrUQev67ZBq2v1RuFx9llynbec9Ng95vWcir9d0r+/Z1eYVFeV82DHiboziGjBZueYfScpKQ9c6LVEjoRYeXvAuUNRwc2N10K3xeNsH0XzSo4g21oYV3jZVGyGv5xdY2f0TrE/agXJjbpP8ohi49DPUjq2E11d8gapGnN/8dbrk2/Md/eNRziw8MheNvPo7HXh0D5wdXw3BRohJTEiEdLTRqKgcWU7yMs3bFoW3Qngsus0eiEomv3+LW6WspBwwVnhf8xD4/oZBcn35DTlNMttc04tXcPl7stY23RaRo25CzOi/I9QTLPejHEFF2aG6ecUDe4nNayHZmX7AWL3pqGry2bDts3zZzUPx1uLx5i8X4uQUzpDW92JvRgoW7vgV8WFRmLX5F/HtkSZG2Cde9RSSzOtfalbhnRz7MpKxbPsKtKx8Dlbu24SG5rVz14HN2GAsnnAZT0/f8rEz9Ym/WSnz0L0waeMPsp0YVxXJKbvFx7zhjnflQT7ZlD12fhfTptOQkboHvc69VuomJ20/Mi+Dadf0R9/fuKOUlZT48BgM+ukj01ZTcEX184zVm21UP1XK6pWrai69zzwwvOK8JW3vkT4QUyfDpDRzHKMvlKNRUXaoG18VVza6GpHvdEGn6c+hwft34e6L75Iyvt7ZV7zEiDj0bdXdtO6dyMrJxmGT6FOjNZLJ7Ywj/rU5nV8EzI+FjbbjWc3RqNq58Iww55/2HBqO647rz+2EGPM6SSj8PI+cw/Dvn8chKioRoy7vjTHtH8FwY3mfU7kxHvluFMKCKbx5qDv+fpw97n5UfP9OfLnpZ/mh/bB1Kc755EHUGdcDce/dIudSyh4U5e+3LMP/tizB3m4f48fbRmCjEeSZm5dgw74/cM/coShvrOG8Pl/jz/smos95XdBx2rNiTCSYfLGwTZqwZg5+2btBzhns8lOUD48WV4dFRNzADnDpBDdQZEPM76HNlKdkPy7UvD2GRuCFJRPwYftHsfCOkch7eBaSzG9n3OrZ+ZOZ7eg5FXvNPWU8+AX6Nr9JQumUI5Ro6k52QvX8djjGd3jSySl7LN69Dov2rEfbqufi3ISzJO9PI6zJxqJtmlhL9gnD2S6uVF8a648716KtEdxUY1kv2/sHLq3a2KkFLNmzAVXMK2L1GG9kxyJzfuZdVKkeLqxYT/IsP+xcjaYJteXHsMTcAx8AtHosDNPbmLxLjuV5+D+O/jjGojYqX1M6bLam7vX67sx/7FW/vNqRML+ywu70ZPSZOxyfXOuNUCmMJ+aNwhtrp5fpnn3+dJNNm2hXs5l5o2pg2s9aLNi2HHGm3bBNHDJid1v9thL98+n6BdifkWrEPATNKtSVWOX1xmqm64D9HpeY47837Y/npMXLOjz+96RtRnyDEWIEuHWVhvhp9+/S7lpVbugN5zTbbPctzX66qb/24DYcMjrRuEIddK51kdnfiqnGao80gs37YDiddVeEmN8Op2Hl76uszs+eZN4W8nrPMkpbfBeNirJy2qGifAT+fPnwpQiHGAs23CTb58C3L/qZWYeWtRW+LJPHOtbiZUc0hZh17LEF69BfzDzvWxrLj65Pg4A+41BXeZa5Lwo66zGyw17HDe+pLC+Y8VdEWd0XinIaQ1GkpctoiwiXSJIgY91GhYQjOjTiKOELM/Ws2BK+7bFz2n1swToUVdbhOZkK1qfwWkEmFG/eE2P37cov9jruVJYF+a+ioqwoihJAqCgriqIEECrKiqIoAYSKsnLaQQ/libuni91/rSj+wzTDkrbEEouyNnXlVOPuUCoKjijT4bvKqcQb2GZHNhafEoXEkWZje6F93eYyK5o2eqW0YYjVgh0r8a/6XdC18WWFmxWmWY5eOh095g8GOKmOopwSchHqiUJW76nOfvEosSgjOxdrU7cX4/VRUXwPDYFK4XFIjIoXS8QdlpUPG6fJ35ue7I2LLayOovgZts+KYbEIDS3ZTHglF2VFURTFb2hHn6IoSgChoqwoihJAqCgriqIEECrKiqIoAYSKsqIoSgChoqwoihJAqCgriqIEECrKiqIoAYSKsqIoSgChoqwoihIwAP8PiIxa5zuQeTMAAAAASUVORK5CYII=" alt="" style="max-width:100%;"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="referrer-receiver">
+<a id="user-content-referrer-receiver" class="anchor" href="#referrer-receiver" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Referrer Receiver</h3>
+<p>Add the Broadcast Receiver in <code>AndroidManifest.xml</code></p>
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">receiver</span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>.ReferrerReceiver<span class="pl-pds">"</span></span>
+    <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">exported</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">intent-filter</span>&gt;
+        &lt;<span class="pl-ent">action</span> <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>com.android.vending.INSTALL_REFERRER<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">intent-filter</span>&gt;
+&lt;/<span class="pl-ent">receiver</span>&gt;</pre></div>
+<p>And in the Receiver's <code>onReceive()</code> method, you can get the referrer value</p>
+<div class="highlight highlight-source-java"><pre><span class="pl-k">@Override</span>
+<span class="pl-k">public</span> <span class="pl-k">void</span> onReceive(<span class="pl-smi">Context</span> context, <span class="pl-smi">Intent</span> intent) {
+    <span class="pl-smi">String</span> referrer <span class="pl-k">=</span> intent<span class="pl-k">.</span>getExtras()<span class="pl-k">.</span>getString(<span class="pl-s"><span class="pl-pds">"</span>referrer<span class="pl-pds">"</span></span>);
+}</pre></div>
+<h3 id="url-redirections">
+<a id="user-content-url-redirections" class="anchor" href="#url-redirections" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Url redirections</h3>
+<ul>
+<li>HTML regular <code>href</code> link
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>${link}<span class="pl-pds">"</span></span>&gt;Click here&lt;/<span class="pl-ent">a</span>&gt;</pre></div>
+</li>
+<li>Javascript manual redirect
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">window</span>.<span class="pl-c1">location</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>${link}<span class="pl-pds">"</span></span>;</pre></div>
+</li>
+<li>Javascript automatic redirect
+<div class="highlight highlight-source-js"><pre><span class="pl-c1">window</span>.<span class="pl-en">onload</span> <span class="pl-k">=</span> <span class="pl-k">function</span>() {
+  <span class="pl-c1">window</span>.<span class="pl-c1">location</span>.<span class="pl-c1">replace</span>(<span class="pl-s"><span class="pl-pds">"</span>${link}<span class="pl-pds">"</span></span>);
+};</pre></div>
+</li>
+<li>Server 3XX redirection (php, nginx, etc.)
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c1">header</span>(<span class="pl-s"><span class="pl-pds">"</span>Location: <span class="pl-smi">${link}</span><span class="pl-pds">"</span></span>);</span></pre></div>
+</li>
+</ul>
+<h3 id="adb-activity-manager">
+<a id="user-content-adb-activity-manager" class="anchor" href="#adb-activity-manager" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adb Activity Manager</h3>
+<p>To try links with adb, use the Activity Manager (am) command:</p>
+<div class="highlight highlight-source-shell"><pre>$ adb shell <span class="pl-s"><span class="pl-pds">'</span>am start "link://smarquis.fr/action?key=value#data"<span class="pl-pds">'</span></span></pre></div>
+<h3 id="alternatives">
+<a id="user-content-alternatives" class="anchor" href="#alternatives" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Alternatives</h3>
+<ul>
+<li><a href="https://branch.io/">Branch</a></li>
+<li><a href="https://hokolinks.com">HOKO</a></li>
+<li><a href="http://www.yozio.com">Yozio</a></li>
+<li><a href="https://tapstream.com/onboarding-links">Tapstream</a></li>
+</ul>
+<br>
+<hr>
+<p><a href="mailto:contact@simon-marquis.fr">© Simon Marquis</a></p>
+</article></body></html>
