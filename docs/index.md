@@ -2,7 +2,8 @@
 
 > The ultimate developer guide to Android application linking methods
 
-*The main objective of this guide is to explore the most common deeplinking methods on Android and evaluate their pros and cons, through the [AppLinks](https://play.google.com/store/apps/details?id=fr.smarquis.applinks) app.*
+*The main objectives of this guide are to explore the most common deeplinking methods available on Android and evaluate their pros and cons.*  
+*The source code of the [AppLinks](https://play.google.com/store/apps/details?id=fr.smarquis.applinks) Android app is available on the corresponding [GitHub repository](https://github.com/SimonMarquis/Android-App-Linking).*
 
 <br>
 
@@ -23,6 +24,8 @@
 </table>
 
 ---
+
+<br>
 
 ## Web url
 
