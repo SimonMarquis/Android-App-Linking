@@ -3,34 +3,17 @@ package fr.smarquis.applinks;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
-import android.widget.TextView;
 
-import butterknife.BindString;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import fr.smarquis.applinks.databinding.ActivityReferrerBinding;
+
 
 public class ReferrerActivity extends AppCompatActivity {
 
-    @BindView(R.id.referrer_content)
-    TextView content;
-
-    @BindString(R.string.referrer_installer_package)
-    String installerPackageNameString;
-
-    @BindString(R.string.referrer_first_launch)
-    String firstLaunchString;
-
-    @BindString(R.string.referrer_detection)
-    String detectionString;
-
-    @BindString(R.string.referrer_raw)
-    String referrerRawString;
-
-    @BindString(R.string.referrer_decoded)
-    String referrerDecodedString;
+    private ActivityReferrerBinding binding;
 
     static void start(@NonNull Context context) {
         context.startActivity(new Intent(context, ReferrerActivity.class));
@@ -44,8 +27,8 @@ public class ReferrerActivity extends AppCompatActivity {
             return;
         }
         Referrer.setDisplayed(this);
-        setContentView(R.layout.activity_referrer);
-        ButterKnife.bind(this);
+        binding = ActivityReferrerBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         updateReferrer();
     }
@@ -58,17 +41,17 @@ public class ReferrerActivity extends AppCompatActivity {
         String referrerDataDecoded = Referrer.getDecodedData(this);
         String installerPackageName = getPackageManager().getInstallerPackageName(getPackageName());
         Printer printer = new Printer(this)
-                .appendKeyValue(installerPackageNameString, installerPackageName)
-                .appendKeyValue(firstLaunchString, firstLaunch)
-                .appendKeyValue(detectionString, referrerDate);
+                .appendKeyValue(getString(R.string.referrer_installer_package), installerPackageName)
+                .appendKeyValue(getString(R.string.referrer_first_launch), firstLaunch)
+                .appendKeyValue(getString(R.string.referrer_detection), referrerDate);
         if (isAvailable) {
-            printer.appendKeyValue(referrerRawString, referrerDataRaw);
+            printer.appendKeyValue(getString(R.string.referrer_raw), referrerDataRaw);
             if (referrerDataDecoded != null) {
-                printer.appendKeyValue(referrerDecodedString, referrerDataDecoded);
+                printer.appendKeyValue(getString(R.string.referrer_decoded), referrerDataDecoded);
             }
         }
-        content.setText(printer.stripNewLines().build());
-        content.setMovementMethod(new LinkMovementMethod());
+        binding.referrerContent.setText(printer.stripNewLines().build());
+        binding.referrerContent.setMovementMethod(new LinkMovementMethod());
     }
 
 }
