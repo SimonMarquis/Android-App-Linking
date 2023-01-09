@@ -1,0 +1,46 @@
+site_name: Android App Linking
+site_url: https://github.com/SimonMarquis/Android-App-Linking
+repo_name: Android App Linking
+repo_url: https://github.com/SimonMarquis/Android-App-Linking
+edit_uri: edit/master/docs/
+site_description: "The ultimate developer guide to Android application linking methods"
+site_author: Simon Marquis
+remote_branch: gh-pages
+
+copyright: 'Copyright &copy; 2023 Simon Marquis'
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  favicon: 'images/logo.png'
+  features:
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.snippets
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+    - search
+
+nav:
+  - '📋 Overview': index.md
+  - '🔗 Methods':
+    - 'Web url': web-url.md
+    - 'App Links': app-links.md
+    - 'Custom scheme': custom-scheme.md
+    - 'Intent scheme': intent-scheme.md
+    - 'App scheme': app-scheme.md
+    - 'Firebase Dynamic Links': firebase-dynamic-links.md
+    - 'Play Store url': play-store-url.md
+    - 'Market scheme': market-scheme.md
+  - '💎 Misc': misc.md
