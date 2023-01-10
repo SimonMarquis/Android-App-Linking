@@ -7,7 +7,12 @@
 
 ## Web
 
-Create the link from the Firebase console.
+Create the link from the [Firebase console](https://console.firebase.google.com/u/0/project/_/durablelinks/creation/).
+
+<figure markdown>
+  [![Firebase Dynamics Links](firebase-dynamic-links-debug.png)](https://mr7f2.app.goo.gl/Tbeh?d=1)
+  <figcaption>Click to debug the Firebase Dynamic Link</figcaption>
+</figure>
 
 ## Android
 
