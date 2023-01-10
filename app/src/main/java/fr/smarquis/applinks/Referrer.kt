@@ -1,98 +1,70 @@
 package fr.smarquis.applinks
 
 import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.content.SharedPreferences
-import java.io.UnsupportedEncodingException
-import java.net.URLDecoder
-import java.text.DateFormat
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.android.installreferrer.api.ReferrerDetails
 
 internal object Referrer {
 
     private const val PREFS_NAME = "referrer"
-    private const val FIRST_LAUNCH = "FIRST_LAUNCH"
-    private const val REFERRER_DATE = "REFERRER_DATE"
-    private const val REFERRER_DATA = "REFERRER_DATA"
-    private const val DISPLAYED = "DISPLAYED"
+    private const val KEY_FIRST_LAUNCH = "FIRST_LAUNCH"
+    private const val KEY_INSTALL_REFERRER = "install_referrer"
+    private const val KEY_REFERRER_CLICK_TIMESTAMP = "referrer_click_timestamp_seconds"
+    private const val KEY_INSTALL_BEGIN_TIMESTAMP = "install_begin_timestamp_seconds"
+    private const val KEY_GOOGLE_PLAY_INSTANT = "google_play_instant"
+    private const val KEY_REFERRER_CLICK_TIMESTAMP_SERVER = "referrer_click_timestamp_server_seconds"
+    private const val KEY_INSTALL_BEGIN_TIMESTAMP_SERVER = "install_begin_timestamp_server_seconds"
+    private const val KEY_INSTALL_VERSION = "install_version"
 
-    private fun prefs(context: Context): SharedPreferences {
-        return context.applicationContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+    data class LocalReferrerDetails(
+        val firstLaunch: Long,
+        val installReferrer: String?,
+        val referrerClickTimestampSeconds: Long,
+        val installBeginTimestampSeconds: Long,
+        val googlePlayInstantParam: Boolean,
+        val referrerClickTimestampServerSeconds: Long,
+        val installBeginTimestampServerSeconds: Long,
+        val installVersion: String?,
+    )
+
+
+    private val INTENT = Intent("custom-action-local-broadcast")
+    val INTENT_FILTER = IntentFilter(INTENT.action)
+
+    private fun prefs(context: Context): SharedPreferences = context.applicationContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+
+    fun init(context: Context, details: ReferrerDetails) {
+        val prefs = prefs(context)
+        if (prefs.all.isNotEmpty()) return
+        prefs.edit().apply {
+            putLong(KEY_FIRST_LAUNCH, System.currentTimeMillis())
+            putString(KEY_INSTALL_REFERRER, details.installReferrer)
+            putLong(KEY_REFERRER_CLICK_TIMESTAMP, details.referrerClickTimestampSeconds)
+            putLong(KEY_INSTALL_BEGIN_TIMESTAMP, details.installBeginTimestampSeconds)
+            putBoolean(KEY_GOOGLE_PLAY_INSTANT, details.googlePlayInstantParam)
+            putLong(KEY_REFERRER_CLICK_TIMESTAMP_SERVER, details.referrerClickTimestampServerSeconds)
+            putLong(KEY_INSTALL_BEGIN_TIMESTAMP_SERVER, details.installBeginTimestampServerSeconds)
+            putString(KEY_INSTALL_VERSION, details.installVersion)
+        }.apply()
+        LocalBroadcastManager.getInstance(context).sendBroadcast(INTENT)
     }
 
-    fun setFirstLaunch(context: Context) {
-        val sp = prefs(context)
-        if (!sp.contains(FIRST_LAUNCH)) {
-            sp.edit().putLong(FIRST_LAUNCH, System.currentTimeMillis()).apply()
-        }
+    fun isAvailable(context: Context): Boolean = prefs(context).all.isNotEmpty()
+
+    fun get(context: Context) = prefs(context).run {
+        LocalReferrerDetails(
+            firstLaunch = getLong(KEY_FIRST_LAUNCH, 0),
+            installReferrer = getString(KEY_INSTALL_REFERRER, null),
+            referrerClickTimestampSeconds = getLong(KEY_REFERRER_CLICK_TIMESTAMP, 0),
+            installBeginTimestampSeconds = getLong(KEY_INSTALL_BEGIN_TIMESTAMP, 0),
+            googlePlayInstantParam = getBoolean(KEY_GOOGLE_PLAY_INSTANT, false),
+            referrerClickTimestampServerSeconds = getLong(KEY_REFERRER_CLICK_TIMESTAMP_SERVER, 0),
+            installBeginTimestampServerSeconds = getLong(KEY_INSTALL_BEGIN_TIMESTAMP_SERVER, 0),
+            installVersion = getString(KEY_INSTALL_VERSION, null),
+        )
     }
 
-    @JvmStatic
-    fun getFirstLaunch(context: Context): String? {
-        val time = prefs(context).getLong(FIRST_LAUNCH, 0)
-        return if (time > 0) {
-            formatDateTime(time)
-        } else null
-    }
-
-    @JvmStatic
-    fun isAvailable(context: Context): Boolean {
-        return prefs(context).contains(REFERRER_DATE)
-    }
-
-    @JvmStatic
-    fun setDisplayed(context: Context) {
-        prefs(context).edit().putBoolean(DISPLAYED, true).apply()
-    }
-
-    fun hasBeenDisplayed(context: Context): Boolean {
-        return prefs(context).getBoolean(DISPLAYED, false)
-    }
-
-    fun setReferrer(context: Context, data: String?) {
-        val sp = prefs(context)
-        sp.edit().putLong(REFERRER_DATE, System.currentTimeMillis())
-            .putString(REFERRER_DATA, data)
-            .apply()
-    }
-
-    @JvmStatic
-    fun getDate(context: Context): String? {
-        val time = prefs(context).getLong(REFERRER_DATE, 0)
-        return if (time > 0) {
-            formatDateTime(time)
-        } else null
-    }
-
-    private fun formatDateTime(time: Long): String {
-        val date = Date(time)
-        return DateFormat.getDateInstance().format(date) + " - " + SimpleDateFormat("HH:mm:ss.SSS", Locale.getDefault()).format(date)
-    }
-
-    @JvmStatic
-    fun getRawData(context: Context): String? {
-        return prefs(context).getString(REFERRER_DATA, null)
-    }
-
-    @JvmStatic
-    fun getDecodedData(context: Context): String? {
-        val raw = getRawData(context) ?: return null
-        val first = urlDecode(raw)
-        if (first == null || first == raw) {
-            return null
-        }
-        val second = urlDecode(first)
-        return if (second == null || second == raw) {
-            first
-        } else second
-    }
-
-    private fun urlDecode(input: String): String? {
-        return try {
-            URLDecoder.decode(input, "UTF-8")
-        } catch (e: UnsupportedEncodingException) {
-            null
-        }
-    }
 }

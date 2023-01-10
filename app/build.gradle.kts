@@ -4,9 +4,8 @@ plugins {
 }
 
 val versionMajor = 1
-val versionMinor = 0
-val versionPatch = 1
-val versionBuild = 1
+val versionMinor = 1
+val versionPatch = 0
 
 android {
     compileSdk = 33
@@ -15,7 +14,7 @@ android {
         namespace = "fr.smarquis.applinks"
         minSdk = 19
         targetSdk = 33
-        versionCode = versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch
         versionName = "$versionMajor.$versionMinor.$versionPatch"
     }
     buildFeatures.viewBinding = true
@@ -25,26 +24,18 @@ android {
             isShrinkResources = true
             proguardFile(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
-        debug {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFile(getDefaultProguardFile("proguard-android-optimize.txt"))
-            signingConfig = signingConfigs.getByName("debug")
-            isDebuggable = true
-        }
     }
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation("androidx.transition:transition-ktx:1.4.1")
-    implementation("com.google.android.material:material:1.6.1")
 
     implementation(platform("com.google.firebase:firebase-bom:29.0.4"))
     implementation("com.google.firebase:firebase-dynamic-links-ktx")
     implementation("com.google.firebase:firebase-analytics-ktx")
-    // implementation("com.google.firebase:firebase-invites:17.0.0")
+    implementation("com.android.installreferrer:installreferrer:2.2")
+    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
 
     testImplementation("junit:junit:4.13.2")
 }

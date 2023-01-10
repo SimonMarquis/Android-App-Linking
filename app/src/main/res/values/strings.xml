@@ -10,7 +10,11 @@
     <string name="referrer_title">Referrer</string>
     <string name="referrer_installer_package">Installed by</string>
     <string name="referrer_first_launch">First launch</string>
-    <string name="referrer_detection">Referrer detection</string>
-    <string name="referrer_raw">Raw referrer</string>
-    <string name="referrer_decoded">Decoded referrer</string>
+    <string name="referrer_url">URL</string>
+    <string name="referrer_click_timestamp">Click timestamp</string>
+    <string name="referrer_click_timestamp_server">Click timestamp (server)</string>
+    <string name="referrer_install_timestamp">Install timestamp</string>
+    <string name="referrer_install_timestamp_server">Install timestamp (server)</string>
+    <string name="referrer_google_play_instant">Google Play Instant</string>
+    <string name="referrer_version">Version</string>
 </resources>

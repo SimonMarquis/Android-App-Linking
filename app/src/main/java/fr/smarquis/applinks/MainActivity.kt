@@ -1,24 +1,30 @@
 package fr.smarquis.applinks
 
+import android.app.Activity
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.text.Html
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
+import androidx.core.text.HtmlCompat
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.transition.TransitionManager
-import com.google.android.gms.tasks.OnSuccessListener
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks
 import fr.smarquis.applinks.Flags.extract
 import fr.smarquis.applinks.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val referrerReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) = invalidateOptionsMenu()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,10 +41,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        LocalBroadcastManager.getInstance(this).registerReceiver(referrerReceiver, Referrer.INTENT_FILTER)
         invalidateOptionsMenu()
-        if (Referrer.isAvailable(this) && !Referrer.hasBeenDisplayed(this)) {
-            ReferrerActivity.start(this)
-        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(referrerReceiver)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -60,17 +69,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun toggleIntentValue() {
-        toggleVisibility(binding.intentValue)
+        binding.intentValue.toggleVisibility()
         TransitionManager.beginDelayedTransition(binding.scrollView)
     }
 
     private fun toggleDataValue() {
-        toggleVisibility(binding.dataValue)
+        binding.dataValue.toggleVisibility()
         TransitionManager.beginDelayedTransition(binding.scrollView)
     }
 
     private fun toggleExtrasValue() {
-        toggleVisibility(binding.extrasValue)
+        binding.extrasValue.toggleVisibility()
         TransitionManager.beginDelayedTransition(binding.scrollView)
     }
 
@@ -100,16 +109,11 @@ class MainActivity : AppCompatActivity() {
             .appendKeyValue("scheme", data.scheme)
             .appendKeyValue("host", data.host)
             .appendKeyValue("path", data.path)
-            .appendKeyValue("query", object : HashMap<String?, String?>() {
-                init {
-                    if (data.isHierarchical) {
-                        val parameterNames = data.queryParameterNames
-                        for (key in parameterNames) {
-                            put(key, data.getQueryParameter(key))
-                        }
-                    }
-                }
-            })
+            .appendKeyValue(
+                "query",
+                if (!data.isHierarchical) emptyMap()
+                else data.queryParameterNames.associateWith(data::getQueryParameter)
+            )
             .appendKeyValue("fragment", data.fragment)
         binding.dataValue.text = printer.stripNewLines().build()
     }
@@ -126,40 +130,20 @@ class MainActivity : AppCompatActivity() {
     private fun initFirebaseDeeplink() {
         FirebaseDynamicLinks.getInstance()
             .getDynamicLink(intent)
-            .addOnSuccessListener(this, OnSuccessListener { pendingDynamicLinkData ->
-                if (pendingDynamicLinkData == null) {
-                    return@OnSuccessListener
-                }
-                val message: CharSequence = Html.fromHtml(String.format(getString(R.string.firebase_dynamic_link_received), pendingDynamicLinkData.link))
-                Snackbar.make(binding.coordinatorLayout, message, Snackbar.LENGTH_INDEFINITE)
-                    .addCallback(object : Snackbar.Callback() {
-                        override fun onShown(sb: Snackbar) {
-                            super.onShown(sb)
-                            TransitionManager.beginDelayedTransition(binding.scrollView)
-                            binding.snackbarSpacer.layoutParams.height = sb.view.height
-                            binding.snackbarSpacer.visibility = View.VISIBLE
-                        }
-
-                        override fun onDismissed(transientBottomBar: Snackbar, event: Int) {
-                            super.onDismissed(transientBottomBar, event)
-                            TransitionManager.beginDelayedTransition(binding.scrollView)
-                            binding.snackbarSpacer.visibility = View.GONE
-                        }
-                    })
-                    .show()
+            .addOnSuccessListener(this) { pendingDynamicLinkData ->
+                pendingDynamicLinkData ?: return@addOnSuccessListener
+                val message = HtmlCompat.fromHtml(String.format(getString(R.string.firebase_dynamic_link_received), pendingDynamicLinkData.link), HtmlCompat.FROM_HTML_MODE_LEGACY)
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                 val bundle = Bundle()
-
                 intent.extras?.let(bundle::putAll)
                 pendingDynamicLinkData.extensions?.let(bundle::putAll)
                 pendingDynamicLinkData.utmParameters.let(bundle::putAll)
                 TransitionManager.beginDelayedTransition(binding.scrollView)
                 fillExtras(bundle)
-            })
+            }
     }
 
-    companion object {
-        private fun toggleVisibility(view: View) {
-            view.visibility = if (view.visibility == View.VISIBLE) View.GONE else View.VISIBLE
-        }
+    private fun View.toggleVisibility() {
+        visibility = if (visibility == View.VISIBLE) View.GONE else View.VISIBLE
     }
 }

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
     <application
         android:name=".App"
         android:allowBackup="false"
@@ -9,8 +13,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".MainActivity" android:exported="true">
+        android:theme="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,21 +38,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:host="smarquis.fr"
-                    android:pathPattern="/action"
-                    android:scheme="http" />
-                <data
-                    android:host="smarquis.fr"
-                    android:pathPattern="/action"
-                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="smarquis.fr" />
+                <data android:pathPattern="/action" />
             </intent-filter>
         </activity>
 
         <activity
             android:name=".ReferrerActivity"
             android:label="@string/referrer_title"
-            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
 
     </application>
 
