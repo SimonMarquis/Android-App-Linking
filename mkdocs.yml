@@ -14,7 +14,10 @@ theme:
   logo: logo.png
   icon:
     repo: fontawesome/brands/github
+  palette:
+    primary: black
   features:
+    - content.action.edit
     - content.code.copy
 
 markdown_extensions:
