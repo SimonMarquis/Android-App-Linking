@@ -1,8 +1,7 @@
 # App Links
 
 !!! info "Documentation"
-    https://developer.android.com/training/app-links/verify-site-associations.html
-
+    https://developer.android.com/training/app-links/verify-android-applinks
 [`https://smarquis.fr/action?key=value#data`](https://smarquis.fr/action?key=value#data){ .md-button }
 
 A JSON verification file needs to be available at https://smarquis.fr/.well-known/assetlinks.json containing the application's package name and keystore fingerprint
@@ -27,43 +26,57 @@ A JSON verification file needs to be available at https://smarquis.fr/.well-know
 To test an existing statement file, you can use the official [Statement List Generator and Tester](https://developers.google.com/digital-asset-links/tools/generator) tool.
 
 During app install/update, an Android `Service` will verify if the App Links configuration complies with the server side `assetlinks.json` file.  
-The results will be sent to logcat, with these tags: `IntentFilterIntentSvc` and `SingleHostAsyncVerifier`
+The results will be sent to logcat:
 
 ???+ "Logcat"
 
-    ???+ success
-        ```
-        I/IntentFilterIntentSvc: Verifying IntentFilter. verificationId:0 scheme:"https" hosts:"smarquis.fr" package:"fr.smarquis.applinks".
-        I/SingleHostAsyncVerifier: Verification result: checking for a statement with source a <
-                                     a: "https://smarquis.fr"
-                                   >
-                                   , relation delegate_permission/common.handle_all_urls, and target b <
-                                     a: "fr.smarquis.applinks"
-                                     b <
-                                       a: "D2:18:2B:0E:34:38:3B:FD:A7:80:AC:21:88:F1:F7:1F:13:33:AD:CB:E3:94:2A:75:96:FB:A1:7A:0B:6B:CE:68"
-                                     >
-                                   >
-                                    --> true.
-        I/IntentFilterIntentSvc: Verification 0 complete. Success:true. Failed hosts:.
-        ```
-
-    ??? failure "Missing or malformed `assetlinks.json` file, missing `package_name` or `sha256_cert_fingerprints`"
-        ```
-        I/IntentFilterIntentSvc: Verifying IntentFilter. verificationId:1 scheme:"https" hosts:"smarquis.fr" package:"fr.smarquis.applinks".
-        I/SingleHostAsyncVerifier: Verification result: checking for a statement with source a <
-                                     a: "https://smarquis.fr"
-                                   >
-                                   , relation delegate_permission/common.handle_all_urls, and target b <
-                                     a: "fr.smarquis.applinks"
-                                     b <
-                                       a: "D2:18:2B:0E:34:38:3B:FD:A7:80:AC:21:88:F1:F7:1F:13:33:AD:CB:E3:94:2A:75:96:FB:A1:7A:0B:6B:CE:68"
-                                     >
-                                   >
-                                    --> false.
-        I/IntentFilterIntentSvc: Verification 1 complete. Success:false. Failed hosts:smarquis.fr.
-        ```
-
-</details>
+    === "Android 12+"
+    
+        ???+ success
+            ```
+            AppLinksAsyncVerifierV2  I  Verification result: checking for a statement with source https://smarquis.fr, relation delegate_permission/common.handle_all_urls, and target fr.smarquis.applinks --> true. [CONTEXT service_id=244 ]
+            AppLinksHostsVerifierV2  I  Verification fr.smarquis.applinks complete. Successful hosts: smarquis.fr. Failed hosts: . Error hosts: . [CONTEXT service_id=244 ]
+            ```
+    
+        ???+ failure
+            ```
+            AppLinksAsyncVerifierV2  I  Verification result: checking for a statement with source https://smarquis.fr, relation delegate_permission/common.handle_all_urls, and target fr.smarquis.applinks --> false. [CONTEXT service_id=244 ]
+            AppLinksHostsVerifierV2  I  Verification fr.smarquis.applinks complete. Successful hosts: . Failed hosts: smarquis.fr. Error hosts: . [CONTEXT service_id=244 ]
+            ```
+    
+    === "Android 11"
+    
+        ???+ success
+            ```
+            I/IntentFilterIntentSvc: Verifying IntentFilter. verificationId:0 scheme:"https" hosts:"smarquis.fr" package:"fr.smarquis.applinks".
+            I/SingleHostAsyncVerifier: Verification result: checking for a statement with source a <
+                                         a: "https://smarquis.fr"
+                                       >
+                                       , relation delegate_permission/common.handle_all_urls, and target b <
+                                         a: "fr.smarquis.applinks"
+                                         b <
+                                           a: "D2:18:2B:0E:34:38:3B:FD:A7:80:AC:21:88:F1:F7:1F:13:33:AD:CB:E3:94:2A:75:96:FB:A1:7A:0B:6B:CE:68"
+                                         >
+                                       >
+                                        --> true.
+            I/IntentFilterIntentSvc: Verification 0 complete. Success:true. Failed hosts:.
+            ```
+    
+        ???+ failure
+            ```
+            I/IntentFilterIntentSvc: Verifying IntentFilter. verificationId:1 scheme:"https" hosts:"smarquis.fr" package:"fr.smarquis.applinks".
+            I/SingleHostAsyncVerifier: Verification result: checking for a statement with source a <
+                                         a: "https://smarquis.fr"
+                                       >
+                                       , relation delegate_permission/common.handle_all_urls, and target b <
+                                         a: "fr.smarquis.applinks"
+                                         b <
+                                           a: "D2:18:2B:0E:34:38:3B:FD:A7:80:AC:21:88:F1:F7:1F:13:33:AD:CB:E3:94:2A:75:96:FB:A1:7A:0B:6B:CE:68"
+                                         >
+                                       >
+                                        --> false.
+            I/IntentFilterIntentSvc: Verification 1 complete. Success:false. Failed hosts:smarquis.fr.
+            ```
 
 ## Android
 
