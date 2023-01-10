@@ -11,9 +11,9 @@ copyright: 'Copyright &copy; 2023 Simon Marquis'
 
 theme:
   name: material
+  logo: logo.png
   icon:
     repo: fontawesome/brands/github
-  favicon: 'images/logo.png'
   features:
     - content.code.copy
 
