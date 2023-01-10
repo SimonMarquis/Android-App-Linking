@@ -45,5 +45,5 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 ➕ Changes the "Open" button in Play Store to "Continue"  
 ➕ Triggers a notification with "Tap to continue"  
 
-![](store_deferred_deeplink_notification.png)
-![](store_deferred_deeplink_button.png)
+![](assets/store_deferred_deeplink_notification.png)
+![](assets/store_deferred_deeplink_button.png)

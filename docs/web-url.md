@@ -49,4 +49,4 @@
 ➖ Doesn't work on the same domain  
 ➖ Some (in-app) browsers might directly handle these links and prevent the app to launch  
 
-![](disambiguation_dialog.png)
+![](assets/disambiguation_dialog.png)

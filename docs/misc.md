@@ -49,8 +49,8 @@ These two actions are essential to the Deferred deeplink method as they provide 
 
 | Regular Deeplink | Deferred Deeplink |
 |---|---|
-| ![](store_deeplink_notification.png) | ![](store_deferred_deeplink_notification.png) |
-| ![](store_deeplink_button.png) | ![](store_deferred_deeplink_button.png) |
+| ![](assets/store_deeplink_notification.png) | ![](assets/store_deferred_deeplink_notification.png) |
+| ![](assets/store_deeplink_button.png) | ![](assets/store_deferred_deeplink_button.png) |
 
 ## Url redirections
 
