@@ -47,3 +47,9 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 
 ![](assets/store_deferred_deeplink_notification.png)
 ![](assets/store_deferred_deeplink_button.png)
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/market-scheme.mp4" type="video/mp4">
+</video>

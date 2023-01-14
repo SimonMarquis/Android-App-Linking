@@ -43,3 +43,9 @@
 ## Pros and Cons
 
 ➖ Some browsers don't handle non-http links  
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/custom-scheme.mp4" type="video/mp4">
+</video>

@@ -58,3 +58,9 @@ FirebaseDynamicLinks.getInstance()
 
 ➕ Shorten urls https://mr7f2.app.goo.gl/Tbeh?d=1  
 ➖ Ugly progress dialog when fetching link data  
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/firebase-dynamic-links.mp4" type="video/mp4">
+</video>

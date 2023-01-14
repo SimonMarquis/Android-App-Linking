@@ -50,3 +50,9 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 ➕ Triggers a notification with "Tap to continue"  
 ➖ Some (in-app) browsers might directly handle these links and prevent the Play Store app to launch  
 ➖ When app is installed, it still opens the Play Store app and completely ignores the deeplink  
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/play-store-url.mp4" type="video/mp4">
+</video>

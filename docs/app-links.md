@@ -2,6 +2,7 @@
 
 !!! info "Documentation"
     https://developer.android.com/training/app-links/verify-android-applinks
+
 [`https://smarquis.fr/action?key=value#data`](https://smarquis.fr/action?key=value#data){ .md-button }
 
 A JSON verification file needs to be available at https://smarquis.fr/.well-known/assetlinks.json containing the application's package name and keystore fingerprint
@@ -125,3 +126,9 @@ Same as [Web url](web-url.md) but with `https` only and `android:autoVerify="tru
 ➕ No potential app hijacking  
 ➖ Doesn't work on the same domain  
 ➖ Some (in-app) browsers might directly handle these links and prevent the app to launch  
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/app-links.mp4" type="video/mp4">
+</video>

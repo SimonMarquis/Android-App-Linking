@@ -60,3 +60,9 @@ And will contain additional parameters in the `Intent`.
 ## Pros and Cons
 
 ➖ Some browsers don't handle non-http links  
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/app-scheme.mp4" type="video/mp4">
+</video>

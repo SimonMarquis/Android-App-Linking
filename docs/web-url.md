@@ -50,3 +50,9 @@
 ➖ Some (in-app) browsers might directly handle these links and prevent the app to launch  
 
 ![](assets/disambiguation_dialog.png)
+
+## Demo
+
+<video class="device" controls muted>
+    <source src="../assets/web-url.mp4" type="video/mp4">
+</video>

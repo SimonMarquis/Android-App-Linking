@@ -37,6 +37,9 @@ markdown_extensions:
 plugins:
     - search
 
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - '📋 Overview': index.md
   - '🔗 Methods':
