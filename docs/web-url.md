@@ -5,7 +5,7 @@
 
 [`http://smarquis.fr/action?key=value#data`](http://smarquis.fr/action?key=value#data){ .md-button }
 
-## Android
+## 🤖 Android
 
 ```xml title="AndroidManifest.xml"
 <activity android:name=".MainActivity">
@@ -23,7 +23,7 @@
 </activity>
 ```
 
-## Data
+## 📦 Data
 
 | Uri | Value |
 |---|---|
@@ -33,7 +33,7 @@
 | query | `?key=value` |
 | fragment | `data` |
 
-## Features
+## ⚙️ Features
 
 | Feature | ✔️/❌ |
 |---|:---:|
@@ -43,7 +43,7 @@
 | Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
-## Pros and Cons
+## 📈 Pros and Cons
 
 ➖ Initial disambiguation dialog  
 ➖ Doesn't work on the same domain  
@@ -51,7 +51,7 @@
 
 ![](assets/disambiguation_dialog.png)
 
-## Demo
+## 📹 Demo
 
 <video class="device" controls muted>
     <source src="../assets/web-url.mp4" type="video/mp4">

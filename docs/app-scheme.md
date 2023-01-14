@@ -7,7 +7,7 @@
 
 Very similar to [Intent scheme](intent-scheme.md).
 
-## Web
+## 🌍 Web
 
 Extra parameters can be added to the link and will be transfered as extras `Bundle` in the `Intent`:
 
@@ -21,14 +21,14 @@ More:
 
 - `S.market_referrer` will trigger a `com.android.vending.INSTALL_REFERRER` Broadcast once the app is installed.
 
-## Android
+## 🤖 Android
 
 The url will be rewritten by the [parseUri()](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/java/android/content/Intent.java#5831) method from the Android source code.  
 The new url will be `https://smarquis.fr/action?key=value#data`
 
 And will contain additional parameters in the `Intent`.  
 
-## Data
+## 📦 Data
 
 | Uri | Value |
 |---|---|
@@ -47,7 +47,7 @@ And will contain additional parameters in the `Intent`.
 |---|
 | `my referrer data` |
 
-## Features
+## ⚙️ Features
 
 | Feature | ✔️/❌ |
 |---|:---:|
@@ -57,11 +57,11 @@ And will contain additional parameters in the `Intent`.
 | Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
-## Pros and Cons
+## 📈 Pros and Cons
 
 ➖ Some browsers don't handle non-http links  
 
-## Demo
+## 📹 Demo
 
 <video class="device" controls muted>
     <source src="../assets/app-scheme.mp4" type="video/mp4">

@@ -5,7 +5,7 @@
 
 [`https://mr7f2.app.goo.gl/Tbeh`](https://mr7f2.app.goo.gl/Tbeh){ .md-button }
 
-## Web
+## 🌍 Web
 
 Create the link from the [Firebase console](https://console.firebase.google.com/u/0/project/_/durablelinks/creation/).
 
@@ -14,7 +14,7 @@ Create the link from the [Firebase console](https://console.firebase.google.com/
   <figcaption>Click to debug the Firebase Dynamic Link</figcaption>
 </figure>
 
-## Android
+## 🤖 Android
 
 Same requirements as [App Links](app-links.md).  
 And add the Firebase Dynamic Links dependency in the app-level Gradle build file:
@@ -34,7 +34,7 @@ FirebaseDynamicLinks.getInstance()
     }
 ```
 
-## Data
+## 📦 Data
 
 | Uri | Value |
 |---|---|
@@ -44,7 +44,7 @@ FirebaseDynamicLinks.getInstance()
 | query | `?key=value` |
 | fragment | `data` |
 
-## Features
+## ⚙️ Features
 
 | Feature | ✔️/❌ |
 |---|:---:|
@@ -54,12 +54,12 @@ FirebaseDynamicLinks.getInstance()
 | Deeplink | ✔️ |
 | Deferred deeplink | ✔️ |
 
-## Pros and Cons
+## 📈 Pros and Cons
 
 ➕ Shorten urls https://mr7f2.app.goo.gl/Tbeh?d=1  
 ➖ Ugly progress dialog when fetching link data  
 
-## Demo
+## 📹 Demo
 
 <video class="device" controls muted>
     <source src="../assets/firebase-dynamic-links.mp4" type="video/mp4">

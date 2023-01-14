@@ -5,7 +5,7 @@
 
 [`link://smarquis.fr/action?key=value#data`](link://smarquis.fr/action?key=value#data){ .md-button }
 
-## Android
+## 🤖 Android
 
 ```xml title="AndroidManifest.xml"
 <activity android:name=".MainActivity">
@@ -20,7 +20,7 @@
 </activity>
 ```
 
-## Data
+## 📦 Data
 
 | Uri | Value |
 |---|---|
@@ -30,7 +30,7 @@
 | query | `?key=value` |
 | fragment | `data` |
 
-## Features
+## ⚙️ Features
 
 | Feature | ✔️/❌ |
 |---|:---:|
@@ -40,11 +40,11 @@
 | Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
-## Pros and Cons
+## 📈 Pros and Cons
 
 ➖ Some browsers don't handle non-http links  
 
-## Demo
+## 📹 Demo
 
 <video class="device" controls muted>
     <source src="../assets/custom-scheme.mp4" type="video/mp4">

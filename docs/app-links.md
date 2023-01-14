@@ -79,7 +79,7 @@ The results will be sent to logcat:
             I/IntentFilterIntentSvc: Verification 1 complete. Success:false. Failed hosts:smarquis.fr.
             ```
 
-## Android
+## 🤖 Android
 
 Same as [Web url](web-url.md) but with `https` only and `android:autoVerify="true"` attribute.  
 
@@ -100,7 +100,7 @@ Same as [Web url](web-url.md) but with `https` only and `android:autoVerify="tru
 </activity>
 ```
 
-## Data
+## 📦 Data
 
 | Uri | Value |
 |---|---|
@@ -110,7 +110,7 @@ Same as [Web url](web-url.md) but with `https` only and `android:autoVerify="tru
 | query | `?key=value` |
 | fragment | `data` |
 
-## Features
+## ⚙️ Features
 
 | Feature | ✔️/❌ |
 |---|:---:|
@@ -120,14 +120,14 @@ Same as [Web url](web-url.md) but with `https` only and `android:autoVerify="tru
 | Deeplink | ✔️ |
 | Deferred deeplink | ❌ |
 
-## Pros and Cons
+## 📈 Pros and Cons
 
 ➕ No more disambiguation dialog  
 ➕ No potential app hijacking  
 ➖ Doesn't work on the same domain  
 ➖ Some (in-app) browsers might directly handle these links and prevent the app to launch  
 
-## Demo
+## 📹 Demo
 
 <video class="device" controls muted>
     <source src="../assets/app-links.mp4" type="video/mp4">

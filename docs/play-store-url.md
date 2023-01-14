@@ -7,18 +7,18 @@
 
 Very similar to the [Market scheme](market-scheme.md).
 
-## Web
+## 🌍 Web
 
 This url contains additional query parameters that will be handled by the Play Store app:
 
 - `url` is the forwarded url
 - `referrer` will trigger a `com.android.vending.INSTALL_REFERRER` Broadcast once the app is installed.
 
-## Android
+## 🤖 Android
 
 The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=value#data`
 
-## Data
+## 📦 Data
 
 *Uri available in deferred deeplink only*
 
@@ -34,7 +34,7 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 |---|
 | `my referrer data` |
 
-## Features
+## ⚙️ Features
 
 | Feature | ✔️/❌ |
 |---|:---:|
@@ -44,14 +44,14 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 | Deeplink | ❌ |
 | Deferred deeplink | ✔️ |
 
-## Pros and Cons
+## 📈 Pros and Cons
 
 ➕ Changes the "Open" button in Play Store to "Continue"  
 ➕ Triggers a notification with "Tap to continue"  
 ➖ Some (in-app) browsers might directly handle these links and prevent the Play Store app to launch  
 ➖ When app is installed, it still opens the Play Store app and completely ignores the deeplink  
 
-## Demo
+## 📹 Demo
 
 <video class="device" controls muted>
     <source src="../assets/play-store-url.mp4" type="video/mp4">
