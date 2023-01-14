@@ -18,7 +18,16 @@ theme:
     primary: black
   features:
     - content.action.edit
+    - content.action.view
     - content.code.copy
+    - content.tabs.link
+    - navigation.footer
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - toc.follow
 
 markdown_extensions:
   - admonition
