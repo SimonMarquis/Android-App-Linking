@@ -16,8 +16,6 @@
 | **[Play Store url](play-store-url.md)** | [Test][test-play-store-url] | ✔️ | ✔️ | ✔️ | ❌ | ✔️ |
 | **[Market scheme](market-scheme.md)** | [Test][test-market-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 
-![](assets/picture.png)
-
 [test-web-url]: http://smarquis.fr/action?key=value#data
 [test-app-links]: https://smarquis.fr/action?key=value#data
 [test-custom-scheme]: link://smarquis.fr/action?key=value#data
