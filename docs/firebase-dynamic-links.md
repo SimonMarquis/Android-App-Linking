@@ -3,6 +3,9 @@
 !!! info "Documentation" 
     https://firebase.google.com/docs/dynamic-links
 
+!!! warning "Dynamic Links Deprecation FAQ"
+    https://firebase.google.com/support/dynamic-links-faq
+
 [`https://mr7f2.app.goo.gl/Tbeh`](https://mr7f2.app.goo.gl/Tbeh){ .md-button }
 
 ## 🌍 Web
