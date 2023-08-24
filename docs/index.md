@@ -12,7 +12,7 @@
 | **[Custom scheme](custom-scheme.md)** | [Test][test-custom-scheme] | ❌ | ✔️ | ❌ | ✔️ | ❌ |
 | **[Intent scheme](intent-scheme.md)** | [Test][test-intent-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | **[App scheme](app-scheme.md)** | [Test][test-app-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
-| **[Firebase Dynamic Links](firebase-dynamic-links.md)** | [Test][test-firebase-dynamic-links] | ✔️ | ❌ | ❌ | ✔️ | ✔️ |
+| **[⚠️ Firebase Dynamic Links](firebase-dynamic-links.md)** | [Test][test-firebase-dynamic-links] | ✔️ | ❌ | ❌ | ✔️ | ✔️ |
 | **[Play Store url](play-store-url.md)** | [Test][test-play-store-url] | ✔️ | ✔️ | ✔️ | ❌ | ✔️ |
 | **[Market scheme](market-scheme.md)** | [Test][test-market-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 
