@@ -13,8 +13,18 @@
 | **[Intent scheme](intent-scheme.md)** | [Test][test-intent-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | **[App scheme](app-scheme.md)** | [Test][test-app-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | **[⚠️ Firebase Dynamic Links](firebase-dynamic-links.md)** | [Test][test-firebase-dynamic-links] | ✔️ | ❌ | ❌ | ✔️ | ✔️ |
-| **[Play Store url](play-store-url.md)** | [Test][test-play-store-url] | ✔️ | ✔️ | ✔️ | ❌ | ✔️ |
-| **[Market scheme](market-scheme.md)** | [Test][test-market-scheme] | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| **[Play Store url](play-store-url.md)** | [Test][test-play-store-url]{ .timestamp-referrer } | ✔️ | ✔️ | ✔️ | ❌ | ✔️ |
+| **[Market scheme](market-scheme.md)** | [Test][test-market-scheme]{ .timestamp-referrer } | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+
+<script type="text/javascript">
+(function(){
+    [].forEach.call(document.querySelectorAll("a.timestamp-referrer"), function(a) {
+        let params = new URLSearchParams(a.search);
+        params.set("referrer", "my referrer data at " + Date.now());
+        a.search = params.toString();
+    });
+})();
+</script>
 
 [test-web-url]: http://smarquis.fr/action?key=value#data
 [test-app-links]: https://smarquis.fr/action?key=value#data

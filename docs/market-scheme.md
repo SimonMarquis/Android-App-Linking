@@ -3,7 +3,7 @@
 !!! info "Documentation"
     https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html#UriSummary
 
-[`market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data`](market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data){ .md-button }
+[`market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data`](market://details?id=fr.smarquis.applinks&url=link%3A%2F%2Fsmarquis.fr%2Faction%3Fkey%3Dvalue%23data&referrer=my%20referrer%20data){ .md-button .timestamp-referrer }
 
 ## 🌍 Web
 
@@ -28,7 +28,7 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 
 | Referrer |
 |---|
-| `my referrer data` |
+| `my referrer data`{ .timestamp-referrer } |
 
 ## ⚙️ Features
 
@@ -53,3 +53,15 @@ The url will be rewritten by the Play Store to `link://smarquis.fr/action?key=va
 <video class="device" controls muted>
     <source src="../assets/market-scheme.mp4" type="video/mp4">
 </video>
+
+<script type="text/javascript">
+(function(){
+    let referrer = "my referrer data at " + Date.now();
+    let a = document.querySelector("a.timestamp-referrer");
+    let params = new URLSearchParams(a.search);
+    params.set("referrer", referrer);
+    a.search = params.toString();
+    document.querySelector("a.timestamp-referrer > code").innerText = a.href;
+    document.querySelector("code.timestamp-referrer").innerText = referrer;
+ })();
+</script>
