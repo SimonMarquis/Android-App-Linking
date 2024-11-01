@@ -25,11 +25,18 @@ android {
             proguardFile(getDefaultProguardFile("proguard-android-optimize.txt"))
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 dependencies {
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
-    implementation("androidx.transition:transition-ktx:1.4.1")
+    implementation("androidx.transition:transition-ktx:1.5.1")
 
     implementation(platform("com.google.firebase:firebase-bom:29.0.4"))
     implementation("com.google.firebase:firebase-dynamic-links-ktx")
@@ -38,6 +45,12 @@ dependencies {
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
 
     testImplementation("junit:junit:4.13.2")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 apply(plugin = "com.google.gms.google-services")
