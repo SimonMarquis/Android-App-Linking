@@ -8,12 +8,12 @@ val versionMinor = 1
 val versionPatch = 0
 
 android {
-    compileSdk = 33
+    compileSdk = 35
     defaultConfig {
         applicationId = "fr.smarquis.applinks"
         namespace = "fr.smarquis.applinks"
         minSdk = 19
-        targetSdk = 33
+        targetSdk = 35
         versionCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch
         versionName = "$versionMajor.$versionMinor.$versionPatch"
     }
